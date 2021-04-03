@@ -44,7 +44,7 @@ header {
     position: absolute;
     border-radius: 50%;
     display: block;
-    box-shadow: inset -10px -10px 20px rgb(0 0 0 / 20%);
+    box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%);
     background: beige;
     position: absolute;
 }
@@ -58,3 +58,6 @@ header {
 #marble7 { margin-left: 932px; margin-bottom: 460px; }
 #marble8 { margin-left: 938px; margin-bottom: 420px; }
 
+body {
+    background-color: cadetblue;
+}

@@ -5,3 +5,14 @@
     /*margin: 1em auto;*/
     padding-top: 2em;
 }
+
+#banner {
+    width: 1000px;
+    height: 500px;
+    background-color: burlywood;
+}
+
+.flex-container {
+    display: flex;
+    background-color: cadetblue;
+}

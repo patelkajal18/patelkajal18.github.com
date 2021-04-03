@@ -30,8 +30,8 @@
 }
 
 .flex-container {
-    height: 550px;
-    width: 1360px;
+    height: 650px;
+    width: 1366px;
     display: flex;
     background-color: beige;
     align-items: center;

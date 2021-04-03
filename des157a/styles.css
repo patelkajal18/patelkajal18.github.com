@@ -38,12 +38,23 @@ header {
 
 }
 
-#marble.dot {
-    height: 20px;
-    width: 20px;
-    margin-left: 120px;
-    margin-bottom: 100px;
+.circle {
+    height: 40px;
+    width: 40px;
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+    display: block;
+    box-shadow: inset -10px -10px 20px rgb(0 0 0 / 20%);
+    background: beige;
+    position: absolute;
 }
+
+#marble1 { margin-left: 1000px; margin-bottom: 700px; }
+#marble2 { margin-left: 980px; margin-bottom: 660px; }
+#marble3 { margin-left: 960px; margin-bottom: 620px; }
+#marble4 { margin-left: 950px; margin-bottom: 580px; }
+#marble5 { margin-left: 940px; margin-bottom: 540px; }
+#marble6 { margin-left: 935px; margin-bottom: 500px; }
+#marble7 { margin-left: 932px; margin-bottom: 460px; }
+#marble8 { margin-left: 938px; margin-bottom: 420px; }
+

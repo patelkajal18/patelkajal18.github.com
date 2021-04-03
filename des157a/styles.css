@@ -45,7 +45,7 @@ header {
     border-radius: 50%;
     display: block;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%);
-    background: beige;
+    background: transparent;
     position: absolute;
 }
 

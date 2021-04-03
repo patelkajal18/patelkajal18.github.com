@@ -7,12 +7,14 @@
 }
 
 #banner {
-    width: 1000px;
-    height: 500px;
+    width: 500px;
+    height: 800px;
     background-color: burlywood;
+    margin-left: 900px;
 }
 
 .flex-container {
     display: flex;
     background-color: cadetblue;
+    align-items: center;
 }

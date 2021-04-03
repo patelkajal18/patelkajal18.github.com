@@ -22,9 +22,9 @@
     height: 600px;
     background-color: transparent;
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%);
+    box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
     margin-left: 120px;
-    margin-bottom: 100px;
+    margin-bottom: -200px;
     /* border-radius: 50%; */
     position: relative;
 }
@@ -33,7 +33,7 @@
     height: 550px;
     width: 1360px;
     display: flex;
-    background-color: cadetblue;
+    background-color: white;
     align-items: center;
     justify-content: center;
 }
@@ -72,7 +72,7 @@ header {
 #marble8 { margin-left: 938px; margin-bottom: 420px; }
 
 body {
-    background-color: cadetblue;
+    background-color: white;
 }
 
 #custom {
@@ -80,9 +80,9 @@ body {
     height: 450px;
     background-color: transparent;
     border-radius: 30% 70% 30% 70% / 50% 80% 30% 70%;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%);
+    box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
     margin-left: 900px;
-    margin-bottom: 650px;
+    margin-bottom: 350px;
     /* border-radius: 50%; */
     position: absolute;
 }

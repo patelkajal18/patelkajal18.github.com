@@ -8,9 +8,10 @@
 
 #banner.oval {
     width: 300px;
-    height: 600px;
+    height: 750px;
     background-color: burlywood;
-    margin-left: 250px;
+    margin-left: 120px;
+    margin-bottom: 100px;
     border-radius: 50%;
 }
 
@@ -25,8 +26,8 @@
 
 section {
     border: 1px solid black;
-    height: 400px;
+    height: 350px;
     width: 200px;
-    margin-left: 20px;
+    margin-left: 70px;
     padding: 10px;
 }

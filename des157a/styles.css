@@ -20,7 +20,8 @@
     height: 550px;
     width: 1360px;
     display: flex;
-    background-color: cadetblue;
+    background-color: transparent;
+    box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%);
     align-items: center;
     justify-content: center;
 }
@@ -44,8 +45,8 @@ header {
     position: absolute;
     border-radius: 50%;
     display: block;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 50%);
-    background: transparent;
+    box-shadow: inset -20 -20 10px rgb(0 0 0 / 15%);
+    background: beige;
     position: absolute;
 }
 

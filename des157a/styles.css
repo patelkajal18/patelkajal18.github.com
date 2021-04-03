@@ -14,6 +14,8 @@
 }
 
 .flex-container {
+    height: auto;
+    width: 800px;
     display: flex;
     background-color: cadetblue;
     align-items: center;

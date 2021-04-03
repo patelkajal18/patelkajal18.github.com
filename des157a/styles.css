@@ -33,15 +33,18 @@
     height: 550px;
     width: 1360px;
     display: flex;
-    background-color: white;
+    background-color: beige;
     align-items: center;
     justify-content: center;
 }
 
 section {
-    border: 1px solid black;
+    border: 10px;
     height: 350px;
     width: 200px;
+    border-style: groove;
+    Border-color: burlywood;
+    background: lightgoldenrodyellow;
     margin-left: 70px;
     padding: 10px;
 }
@@ -72,7 +75,7 @@ header {
 #marble8 { margin-left: 938px; margin-bottom: 420px; }
 
 body {
-    background-color: white;
+    background-color: beige;
 }
 
 #custom {

@@ -45,7 +45,7 @@ header {
     position: absolute;
     border-radius: 50%;
     display: block;
-    box-shadow: inset -20 -20 10px rgb(0 0 0 / 15%);
+    box-shadow: inset -10px -10px 10px rgb(0 0 0 / 15%);
     background: beige;
     position: absolute;
 }

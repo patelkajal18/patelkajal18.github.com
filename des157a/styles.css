@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1366px;
     min-width: 900px;
-    /*margin: 1em auto;*/
+    margin: 0 auto !important;
     padding-top: 2em;
 }
 
@@ -95,5 +95,9 @@ body {
 }
 
 header {
+    text-align: center;
+}
+
+footer {
     text-align: center;
 }

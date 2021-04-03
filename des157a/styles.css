@@ -10,13 +10,13 @@
     width: 300px;
     height: 600px;
     background-color: burlywood;
-    margin-left: 60px;
+    margin-left: 250px;
     border-radius: 50%;
 }
 
 .flex-container {
     height: 650px;
-    width: 1000px;
+    width: 1360px;
     display: flex;
     background-color: cadetblue;
     align-items: center;

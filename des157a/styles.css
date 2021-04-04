@@ -62,6 +62,10 @@ ol {
     list-style-type: none;
 }
 
+li {
+    padding: 5px;
+}
+
 a {
     background-color: transparent;
     color: grey;

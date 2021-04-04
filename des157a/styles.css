@@ -50,6 +50,7 @@ section {
     margin-left: 70px;
     padding: 12px;
     border-radius: 5px;
+    position: absolute;
 }
 
 header {
@@ -58,7 +59,8 @@ header {
     box-shadow: inset 0px 0px 8px 0 rgb(0 0 0 / 20%), inset 0px 2px 20px 0 rgb(0 0 0 / 19%);
     padding: 10px;
     width: 500px;
-    margin: 0 auto !important;
+    /*margin: 0 auto !important;*/
+    margin-top: 100px;
     border-radius: 25px;
 }
 
@@ -199,4 +201,10 @@ ol {
     }
  }
 
+ .outer-box {
+     width: 650px;
+     height: 200px;
+     position: relative;
+     background-color: white;
+ }
 

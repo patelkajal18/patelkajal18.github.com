@@ -27,6 +27,7 @@
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
     border: 1px solid black;
+    animation: daylight 10s infinite;
     position: absolute;
 }
 
@@ -83,6 +84,7 @@ body {
     background-color: transparent;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     border: 1px solid;
+    animation: daylight 10s infinite;
     position: absolute;
 }
 
@@ -96,6 +98,7 @@ body {
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     border: 1px solid black;
     /* border-radius: 50%; */
+    animation: daylight 10s infinite;
     position: absolute;
 }
 
@@ -109,6 +112,7 @@ body {
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
     border: 1px solid black;
+    animation: daylight 10s infinite;
     position: absolute;
 }
 
@@ -122,6 +126,7 @@ body {
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     border: 1px solid black;
     /* border-radius: 50%; */
+    animation: daylight 10s infinite;
     position: absolute;
 }
 
@@ -135,6 +140,7 @@ body {
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
     border: 1px solid black;
+    animation: daylight 10s infinite;
     position: absolute;
 }
 
@@ -163,5 +169,15 @@ ol {
 .mix {
     box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
 }
+
+@keyframes daylight {
+    0%   {box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);}
+   15%  {box-shadow: inset 0 0 2000px rgb(100 100 100 / 45%);}
+   30%  {box-shadow: inset 0 0 2000px rgb(50 50 50 / 45%);}
+   45% {box-shadow: inset 0 0 2000px rgb(0 0 0 / 45%);}
+   60% {box-shadow: inset 0 0 2000px rgb(50 50 50 / 45%);}
+   85% {box-shadow: inset 0 0 2000px rgb(100 100 100 / 45%);}
+   100% {box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);}
+ }
 
 

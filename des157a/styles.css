@@ -63,14 +63,18 @@ header {
     color: #3c1414;
     /* box-shadow: inset 0px 0px 8px 0 rgb(0 0 0 / 20%), inset 0px 2px 20px 0 rgb(0 0 0 / 19%); */
     padding: 10px;
-    width: 810px;
+    padding-left: 30px;
+    width: 790px;
     /* margin: 0 auto !important; */
     margin-top: 20px;
     margin-left: 50px;
     margin-bottom: 40px;
     border-radius: 25px;
     border: 1px solid burlywood;
-    background-color: white;
+    /* border-radius: 50%; */
+    /* border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%; */
+    border-radius: 5px;
+    background-color: #ffffff;
     box-shadow: rgb(97 178 189 / 40%) -5px 5px, rgb(97 178 189 / 30%) -10px 10px, rgb(97 178 189 / 20%) -15px 15px, rgb(97 178 189 / 10%) -20px 20px, rgb(97 178 189 / 5%) -25px 25px;
 }
 
@@ -223,7 +227,7 @@ ol {
     margin-bottom: 0px;
     /* justify-content: center; */
     /* margin-left: 0px; */
-    border-radius: 25px;
+    border-radius: 30% 70% 30% 70% / 50% 80% 30% 70%;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
  }
 

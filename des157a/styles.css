@@ -126,15 +126,15 @@ body {
 }
 
 #cus5 {
-    width: 400px;
-    height: 600px;
-    margin-top: 400px;
-    margin-left: 170px;
+    width: 500px;
+    height: 700px;
+    margin-top: 210px;
+    margin-left: -120px;
     background-color: transparent;
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
-    border: 1px solid white;
+    border: 1px solid black;
     position: absolute;
 }
 
@@ -159,4 +159,9 @@ ol {
     margin-left: 10px;
     position: relative;
 }
+
+.mix {
+    box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
+}
+
 

@@ -31,7 +31,7 @@
 }
 
 .flex-container {
-    height: 800px;
+    height: 550px;
     width: 1366px;
     display: flex;
     background-color: transparent;
@@ -41,27 +41,37 @@
 
 section {
     border: 10px;
-    height: 312px;
+    height: 400px;
     width: 200px;
     border-style: groove;
-    Border-color: #ba8759;
+    /* Border-color: #ba8759; */
+    /* border-color: #b08d57; */
+    border-color: burlywood;
+    /* border-color: #c59e66; */
     background: transparent;
     box-shadow: inset 0 0 2000px rgb(245 238 229 / 60%);
-    margin-left: 70px;
+    margin-left: 30px;
     padding: 12px;
     border-radius: 5px;
-    position: absolute;
+    /* flex-direction: column; */
+    /* display: flex; */
+    /* position: absolute; */
 }
 
 header {
     text-align: center;
     color: #3c1414;
-    box-shadow: inset 0px 0px 8px 0 rgb(0 0 0 / 20%), inset 0px 2px 20px 0 rgb(0 0 0 / 19%);
+    /* box-shadow: inset 0px 0px 8px 0 rgb(0 0 0 / 20%), inset 0px 2px 20px 0 rgb(0 0 0 / 19%); */
     padding: 10px;
-    width: 500px;
-    /*margin: 0 auto !important;*/
-    margin-top: 100px;
+    width: 810px;
+    /* margin: 0 auto !important; */
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 40px;
     border-radius: 25px;
+    border: 1px solid burlywood;
+    background-color: white;
+    box-shadow: rgb(97 178 189 / 40%) -5px 5px, rgb(97 178 189 / 30%) -10px 10px, rgb(97 178 189 / 20%) -15px 15px, rgb(97 178 189 / 10%) -20px 20px, rgb(97 178 189 / 5%) -25px 25px;
 }
 
 .circle {
@@ -156,13 +166,15 @@ ol {
 }
 
 .stained-glass {
-    width: 480px;
-    height: 950px;
+    width: 390px;
+    height: 790px;
     overflow: hidden;
-    margin-bottom: 140px;
-    margin-left: 10px;
+    margin-bottom: 220px;
+    margin-left: 50px;
     position: relative;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 8px 0 rgb(0 0 0 / 20%), inset 0px 2px 20px 0 rgb(0 0 0 / 19%);
 }
 
 .mix {
@@ -202,9 +214,16 @@ ol {
  }
 
  .outer-box {
-     width: 650px;
-     height: 200px;
-     position: relative;
-     background-color: white;
+    width: 850px;
+    height: 500px;
+    /* position: relative; */
+    background-color: white;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0px;
+    /* justify-content: center; */
+    /* margin-left: 0px; */
+    border-radius: 25px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
  }
 

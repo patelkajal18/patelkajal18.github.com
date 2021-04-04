@@ -173,26 +173,26 @@ ol {
 
 @keyframes daylight {
     0% {
-        box-shadow: inset 0 0 2000px rgb(25 255 55 / 45%);
+        box-shadow: inset 0 0 2000px rgb(182 227 220 / 45%);
     }
     
     15% {
-        box-shadow: inset 0 0 2000px rgb(230 23 23 / 45%);
+        box-shadow: inset 0 0 2000px rgb(192 236 237 / 45%);
     }
     30% {
-        box-shadow: inset 0 0 2000px rgb(215 215 34 / 45%);
+        box-shadow: inset 0 0 2000px rgb(84 212 83 / 45%);
     }
     45% {
-        box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
+        box-shadow: inset 0 0 2000px rgb(92 184 237 / 45%);
     }
     60% {
-        box-shadow: inset 0 0 2000px rgb(215 25 223 / 45%);
+        box-shadow: inset 0 0 2000px rgb(89 157 235 / 45%);
     }
     85% {
-        box-shadow: inset 0 0 2000px rgb(25 255 255 / 45%);
+        box-shadow: inset 0 0 2000px rgb(97 121 237 / 45%);
     }
     100% {
-        box-shadow: inset 0 0 2000px rgb(3 255 255 / 45%);
+        box-shadow: inset 0 0 2000px rgb(106 102 237 / 45%);
     }
  }
 

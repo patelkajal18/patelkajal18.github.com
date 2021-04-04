@@ -1,7 +1,7 @@
 .wrapper {
     width: 100%;
     max-width: 1366px;
-    min-width: 900px;
+    min-width: 900px !important;
     margin: 0 auto !important;
     padding-top: 2em;
 }

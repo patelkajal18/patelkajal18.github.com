@@ -26,7 +26,7 @@
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
-    border: 1px solid black;
+    border: 1px solid #f5eee5;
     position: absolute;
 }
 
@@ -44,14 +44,16 @@ section {
     height: 312px;
     width: 200px;
     border-style: groove;
-    Border-color: burlywood;
-    background: lightgoldenrodyellow;
+    Border-color: #ba8759;
+    background: transparent;
+    box-shadow: inset 0 0 2000px rgb(245 238 229 / 60%);
     margin-left: 70px;
     padding: 12px;
 }
 
 header {
-    align-content: center;
+    text-align: center;
+    color: #3c1414;
 
 }
 
@@ -71,7 +73,7 @@ header {
 #marble3 { margin-left: 960px; margin-bottom: 620px; }
 
 body {
-    background: linear-gradient(to right, #fffdeb 47%, #61B2BD 100%);
+    background: linear-gradient(to right, #f5eee5 47%, #61B2BD 100%);;
 }
 
 #custom {
@@ -82,7 +84,7 @@ body {
     margin-top: 70px;
     background-color: transparent;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid;
+    border: 1px solid #f5eee5;
     position: absolute;
 }
 
@@ -94,7 +96,7 @@ body {
     border-radius: 50% 40% 50% 80% / 50% 80% 40% 10%;
     background-color: transparent;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid black;
+    border: 1px solid #f5eee5;
     /* border-radius: 50%; */
     position: absolute;
 }
@@ -108,20 +110,20 @@ body {
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
-    border: 1px solid black;
+    border: 1px solid #f5eee5;
     position: absolute;
 }
 
 #cus4 {
-    width: 400px;
-    height: 600px;
-    margin-left: -30px;
-    margin-top: -100px;
-    border-radius: 30% 70% 30% 70% / 50% 80% 30% 70%;
+    width: 500px;
+    height: 700px;
+    margin-top: -50px;
+    margin-left: 60px;
     background-color: transparent;
+    border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid black;
     /* border-radius: 50%; */
+    border: 1px solid #f5eee5;
     position: absolute;
 }
 
@@ -134,12 +136,14 @@ body {
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
     box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
     /* border-radius: 50%; */
-    border: 1px solid black;
+    border: 1px solid #f5eee5;
     position: absolute;
 }
 
 header {
     text-align: center;
+    color: #3c1414;
+    font-family: 'Monoton';
 }
 
 footer {
@@ -153,7 +157,6 @@ ol {
 .stained-glass {
     width: 480px;
     height: 950px;
-    border: 1px black solid;
     overflow: hidden;
     margin-bottom: 140px;
     margin-left: 10px;

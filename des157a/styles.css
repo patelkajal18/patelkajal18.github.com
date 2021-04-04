@@ -76,6 +76,21 @@ ol {
     list-style-type: none;
 }
 
+a {
+    background-color: transparent;
+    color: grey;
+    text-decoration: none;
+    font-size: large;
+}
+
+a:hover {
+    color: black;
+}
+
+h2 {
+    text-decoration: wavy;
+}
+
 .stained-glass {
     width: 390px;
     height: 790px;

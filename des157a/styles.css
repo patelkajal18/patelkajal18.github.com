@@ -23,7 +23,8 @@ header {
 }
 
 body {
-    background: linear-gradient(to right, #f5eee5 47%, #61B2BD 100%);;
+    background: linear-gradient(to right, #f5eee5 47%, #61B2BD 100%);
+    font-family: 'Playfair Display';
 }
 
 .flex-container {

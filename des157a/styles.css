@@ -171,12 +171,12 @@ h2 {
     box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
 }
 
-#glass1:hover{ animation: kaleidoscope 3s infinite}
-#glass2:hover{ animation: kaleidoscope 3s infinite}
-#glass3:hover{ animation: kaleidoscope 3s infinite}
-#glass4:hover{ animation: kaleidoscope 3s infinite}
-#glass5:hover{ animation: kaleidoscope 3s infinite}
-#glass6:hover{ animation: kaleidoscope 3s infinite}
+#glass1:hover{ animation: kaleidoscope 5s infinite}
+#glass2:hover{ animation: kaleidoscope 5s infinite}
+#glass3:hover{ animation: kaleidoscope 5s infinite}
+#glass4:hover{ animation: kaleidoscope 5s infinite}
+#glass5:hover{ animation: kaleidoscope 5s infinite}
+#glass6:hover{ animation: kaleidoscope 5s infinite}
 
 @keyframes kaleidoscope {
     0% {

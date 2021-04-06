@@ -74,10 +74,6 @@ a:hover {
     color: black;
 }
 
-h2 {
-    text-decoration: wavy;
-}
-
 .stained-glass-banner {
     width: 390px;
     height: 790px;
@@ -93,13 +89,7 @@ h2 {
     width: 350px;
     height: 450px;
     border-radius: 30% 70% 30% 70% / 50% 80% 30% 70%;
-    /* border-radius: 50%; */
     margin-top: 70px;
-    background-color: transparent;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    /*border: 1px solid #f5eee5;*/
-    border: 1px solid;
-    position: absolute;
 }
 
 #glass2 {
@@ -107,11 +97,7 @@ h2 {
     height: 600px;
     margin-top: 400px;
     margin-left: 170px;
-    background-color: transparent;
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid;
-    position: absolute;
 }
 
 #glass3 {
@@ -120,10 +106,6 @@ h2 {
     margin-left: 0px;
     margin-top: 500px;
     border-radius: 50% 40% 50% 80% / 50% 80% 40% 10%;
-    background-color: transparent;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid;
-    position: absolute;
 }
 
 #glass4 {
@@ -131,11 +113,7 @@ h2 {
     height: 700px;
     margin-top: -50px;
     margin-left: 60px;
-    background-color: transparent;
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid;
-    position: absolute;
 }
 
 #glass5 {
@@ -144,10 +122,6 @@ h2 {
     margin-left: -30px;
     margin-top: -100px;
     border-radius: 30% 70% 30% 70% / 50% 80% 30% 70%;
-    background-color: transparent;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid;
-    position: absolute;
 }
 
 #glass6 {
@@ -155,15 +129,14 @@ h2 {
     height: 700px;
     margin-top: 210px;
     margin-left: -120px;
-    background-color: transparent;
     border-radius: 60% 40% 70% 30% / 70% 60% 40% 30%;
-    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
-    border: 1px solid;
-    position: absolute;
 }
 
 .light {
-    box-shadow: inset 0 0 2000px rgb(200 200 200 / 45%);
+    box-shadow: inset 0 0 2000px rgb(255 255 255 / 45%);
+    border: 1px dotted;
+    position: absolute;
+    background-color: transparent;
 }
 
 #glass1:hover{ animation: kaleidoscope 5s infinite}
@@ -199,5 +172,6 @@ h2 {
  }
 
  footer {
-    text-align: center;
+    text-align: left;
+    padding: 5px;
 }

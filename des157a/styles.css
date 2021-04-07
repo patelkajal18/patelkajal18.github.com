@@ -58,11 +58,11 @@ section {
 
 ol {
     list-style-type: none;
-    padding-inline-start: 0px;
+    padding-inline-start: 28px;
 }
 
 li {
-    padding-bottom: 2px;
+    padding-bottom: 5px;
 }
 
 a {

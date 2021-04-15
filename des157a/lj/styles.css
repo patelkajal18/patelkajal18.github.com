@@ -1,26 +1,46 @@
 .post {
     width: 450px;
     height: 400px;
-    background-color: #FFF;
+    background-color: beige;
     border: 1px solid black;
     padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 10px 6px -6px darkslategray;
 
 }
 
 .container {
     background-image: url('images/backgroundJournal.png');
     width: 1366px;
-    height: 1000px;
+    height: 1050px;
     margin: 0 auto;
-    background-size: cover;
+    background-size:100% 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    border: 1px solid;
 }
 
 body {
     font-family: 'Playfair Display';
+}
+
+h1 {
+    color: beige;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    width: 700px;
+    text-align: center;
+}
+
+a {
+    background-color: transparent;
+    color: beige;
+    text-decoration: none;
+    font-size: medium;
+}
+
+a:hover {
+    color: black;
 }

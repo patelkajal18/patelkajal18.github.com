@@ -1,6 +1,6 @@
 .post {
     width: 460px;
-    height: 440px;
+    height: auto;
     background-color: beige;
     border: 1px solid black;
     padding: 20px;
@@ -12,7 +12,7 @@
 .container {
     background-image: url('images/backgroundJournal.png');
     width: 1366px;
-    height: 730px;
+    height: auto;
     margin: 0 auto;
     background-size:100% 100%;
     display: flex;
@@ -23,6 +23,10 @@
 
 body {
     font-family: 'Playfair Display';
+}
+
+p {
+    line-height: 1.5em;
 }
 
 h1 {

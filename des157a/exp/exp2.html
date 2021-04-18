@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Experiments</title>
+</head>
+
+<body class="container">
+    <h1>experiment 2</h1>
+    <h2>your statement: N/A</h2>
+    <button type="button">go crazy!</button>
+    <h3></h3>
+
+    <script>
+        /* This program uses user input and loops through 
+        the statement to capitalize every odd character */
+
+        var userInput = prompt("enter a statement:", "");
+        console.log(userInput);
+        var colors = ["red", "yellowgreen", "green", "blue", "purple"];
+        var borders = ["thin solid red", "thick solid green", "thin dashed blue", "thick dashed black", "thin dotted pink", "thick dotted gray", "thin double orange", "thick double purple"];
+        var inputDisplay = document.querySelector('h2');
+        var btn = document.querySelector('button');
+        var funky = document.querySelector('h3');
+        var bod = document.querySelector('body');
+        var container = document.querySelector('.container');
+
+        bod.style.fontFamily = "sans-serif";
+        bod.style.textAlign = "center";
+
+        container.style.width = "1366px";
+        container.style.height = "730px";
+        container.style.margin = "0 auto";
+        container.style.border = "thin solid";
+
+        inputDisplay.innerHTML = `your statement: ${userInput}`;
+        inputDisplay.style.backgroundColor = "black";
+        inputDisplay.style.color = "beige";
+        inputDisplay.style.padding = "10px";
+        inputDisplay.style.margin = "20px";
+
+        function funkyCap() {
+            var result = "";
+            var input = userInput.toLowerCase();
+            for (var i = 0; i < input.length; i++) {
+                if (i % 2 == 0) {
+                    result += input[i].toUpperCase();
+                } else {
+                    result += input[i];
+                }
+            }
+            return result;
+        }
+        
+        function randomCap() {
+            console.log(userInput);
+            var finalStr = "";
+            var choice = Math.floor(Math.random() * 3)
+            switch(choice) {
+                case 1: finalStr = funkyCap(); break;
+                case 2: finalStr = userInput.toUpperCase(); break;
+                default: finalStr = userInput.toLowerCase(); break;
+            }
+
+            return finalStr;
+        }
+
+        btn.onclick = function goCrazy() {
+            console.log("here");
+            funkyStr = randomCap();
+            funky.innerHTML = funkyStr;
+            funky.style.color = colors[Math.floor(Math.random() * 5)];
+            funky.style.border = borders[Math.floor(Math.random() * 8)];
+            funky.style.fontSize = "xxx-large";
+            funky.style.padding = "10px";
+            funky.style.marginLeft = "300px";
+            funky.style.marginRight = "300px";
+        }
+
+    </script>
+</body>
+
+</html>

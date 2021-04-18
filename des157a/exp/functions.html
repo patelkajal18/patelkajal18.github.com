@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+
+<body>
+    <h1>Functions in JavaScript</h1>
+
+    <script>
+        function doStuff() {
+            var myString = "Here is a string of text";
+            var upperCase = myString.toUpperCase();
+
+            console.log(myString);
+            console.log(upperCase);
+        }
+
+        //doStuff();
+
+        function checkNum() {
+            var num = prompt("Please pick a whole number",);
+
+            if (num < 10) {
+                console.log("you entered a number less than 10");
+                for (var i = 0; i < 10; i++) {
+                    console.log(`Here is a ${i}`);
+                }
+            }
+            else if (num > 9) {
+                console.log("you entered a big number")
+            } else {
+                console.log("ERROR: you didn't enter a number!")
+            }
+        }
+
+        checkNum();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.red {
+    width: 650px;
+    height: 750px;
+    margin: 20px;
+    border: 25px solid red;
+    background-color: red;
+}
+.mag {
+    border: 1px solid white;
+    background-color: black;
+    margin: 20px;
+    width: 650px;
+    height: 750px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: white;
+    font-size: 130px;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    display: none;
+}
+
+button {
+    display: none;
+}
+
+img {
+    display: none;
+}
+
+.container {
+    width: 1366px;
+    height: auto;
+    margin: auto;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftText {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    justify-content: left;
+    background-color: transparent;
+}
+
+.rightText {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    justify-content: right;
+    background-color: transparent;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+body {
+    background: #EEE;
+}

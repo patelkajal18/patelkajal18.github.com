@@ -11,64 +11,59 @@
     <script src="script.js" defer></script>
 </head>
 <body class="container">
-    <h1>mad libs</h1>
+        <!-- form inputs -->
+        <section id="inputBox">
+            <h4>{ MADLIBS GENERATOR }</h4>
+            <form name="magForm">
+                <label for="char">tv show character:</label> <!--Supreme Court Justice-->
+                <input type="text" id="char">
+        
+                <label for="snack">favorite snack:</label> <!--Overpopulation-->
+                <input type="text" id="snack">
 
-    <!-- form inputs -->
-    <section id="inputBox">
-        <h4>MADLIBS GENERATOR</h4>
-        <form name="magForm">
-            <label for="char">tv show character:</label> <!--Supreme Court Justice-->
-            <input type="text" id="char">
-    
-            <label for="snack">favorite snack:</label> <!--Overpopulation-->
-            <input type="text" id="snack">
+                <label for="background">choose an object:</label> <!--Magazine background-->
+                <select id="background" name="objList">
+                <option value="default" selected>---</option>
+                <option value="stones">stones</option>
+                <option value="clouds">clouds</option>
+                <option value="waves">waves</option>
+                </select>
 
-            <label for="background">choose an object:</label> <!--Magazine background-->
-            <select id="background" name="objList">
-            <option value="stones">stones</option>
-            <option value="clouds">clouds</option>
-            <option value="waves">waves</option>
-            </select>
+                <label for="num">lucky number (10-99):</label>  <!--the date at the top-->
+                <input type="number" id="num" min="10" max="99">
 
-            <label for="num">lucky number (10-99):</label>  <!--the date at the top-->
-            <input type="number" id="num" min="10" max="99">
-
-            <label for="house">household object:</label> <!--partnership at the bottom-->
-            <input type="text" id="house">
-            
-            <button type="submit">submit</button>
-        </form>
-    </section>
-    
-    
+                <label for="house">household object:</label> <!--partnership at the bottom-->
+                <input type="text" id="house">
+                
+                <button type="submit">submit</button>
+            </form>
+        </section>
+        
+        
         <section id="mag">
             <div id="border">
                 <h2>TIME</h2>
                 <aside id="center1">
-                    <h3>Overpopulation of <b>Algae</b> in Hawaii</h3>
+                    <h3>Overpopulation of Algae in Hawaii</h3>
                     <p>By MOLLY HALL</p>
                 </aside>
                 <aside class="leftText" id="left1">
-                    <h3>Justice <b>Brown</b> Elected To Supreme Court</h3>
+                    <h3>Justice Brown Elected To Supreme Court</h3>
                     <p>By DAVID FRESH</p>
                 </aside>
                 <aside class="leftText" id="left2">
-                    <h5>IN PARTNERSHIP WITH THE WORLD <b>ECONOMIC</b> COUNCIL</h5>
+                    <h5>IN PARTNERSHIP WITH THE WORLD ECONOMIC COUNCIL</h5>
                 </aside>
                 <aside id="right1">
-                    <h5>April 21, 30<b>45</b></h5>
+                    <h5>April 21, 2021</h5>
                 </aside>
-                <!-- <div class="rightText" id="right1">
-                    <h3>THE RIVER'S CURRENCY</h3>
-                    <p>By WALTER BROWN</p>
-                </div>
-                <div class="rightText" id="right2">
-                    <h3>OLD GHOSTS, NEW FACES</h3>
-                    <p>By JON SMITH</p>
-                </div> -->
             </div>
         </section>
     
-
+    <footer>
+        <a href="https://validator.w3.org/check?uri=referer">valid html 5 | </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">valid css | </a>
+        <a href="mailto:&#107;&#097;&#106;&#112;&#097;&#116;&#101;&#108;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">email</a>
+    </footer>
 </body>
 </html>

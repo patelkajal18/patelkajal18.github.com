@@ -8,12 +8,13 @@
         console.log("submit");
         
         let form = document.forms["magForm"];
-        let tvChar = form["char"].value;
-        let snack = form["snack"].value;
+        let tvChar = formatWords(form["char"].value);
+        let snack = formatWords(form["snack"].value);
         let background = form["background"].value;
         let numYr = form["num"].value;
         let houseObj = form["house"].value;
-        let correctInputs = validate(tvChar, snack, numYr, houseObj);
+        let correctInputs = validate(tvChar, snack, numYr, houseObj, background);
+        console.log(background);
         if (correctInputs) {
             let justiceAuthor = document.querySelector('#left1 p');
             let justice = document.querySelector('#left1 h3');
@@ -34,9 +35,9 @@
         }
     });
 
-    function validate(tvChar, snack, numYr, houseObj) {
-        if (tvChar == "" || snack == "" || numYr == "" || houseObj == "") {
-            console.log("nope", 1, tvChar, snack, typeof(numYr), houseObj);
+    function validate(tvChar, snack, numYr, houseObj, background) {
+        if (tvChar == "" || snack == "" || numYr == "" || houseObj == "" || background == "default") {
+            console.log("nope", 1, tvChar, snack, typeof(numYr), houseObj, background);
             alert("Please fill out all inputs!");
             return false;
         }
@@ -65,6 +66,15 @@
                 break;
           }
     } 
+
+    function formatWords(input) {
+        const words = input.toLowerCase().split(" ");
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+        words.join(" ");
+        return words;
+    }
     
 })();
     

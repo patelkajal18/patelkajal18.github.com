@@ -27,6 +27,10 @@
                 justice.style.color = "black";
                 justiceAuthor.style.color = "black";
                 document.querySelector('h2').style.color = "white";
+            } else {
+                justice.style.color = "white";
+                justiceAuthor.style.color = "white";
+                document.querySelector('h2').style.color = "black";
             }
             partner.innerHTML = `IN PARTNERSHIP WITH THE WORLD <b>${houseObj.toUpperCase()}</b> COUNCIL`;
             time.innerHTML = `April 20, <b>30${numYr}</b>`;
@@ -53,6 +57,8 @@
             case 'stones': 
                 mag.style.backgroundImage = "url('./images/rocks.jpg')"; 
                 midText.innerHTML = `Overpopulation of <b>${food}</b> in California`;
+                midText.style.color = "white";
+                midAuthor.style.color = "white";
                 break;
             case 'clouds': 
                 mag.style.backgroundImage = "url('./images/sky.jpg')"; 
@@ -63,6 +69,8 @@
             default:
                 mag.style.backgroundImage = "url('./images/ocean.jpg')"; 
                 midText.innerHTML = `Overpopulation of <b>${food}</b> in Hawaii`;
+                midText.style.color = "white";
+                midAuthor.style.color = "white";
                 break;
           }
     } 

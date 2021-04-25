@@ -22,6 +22,7 @@
             let time  = document.querySelector('#right1 h5');
 
             changeBackgroundContext(background, snack);
+            console.log(tvChar);
             justice.innerHTML = `Justice <b>${tvChar}</b> Elected To Supreme Court`;
             if (background == "clouds") {
                 justice.style.color = "black";
@@ -43,6 +44,10 @@
         if (tvChar == "" || snack == "" || numYr == "" || houseObj == "" || background == "default") {
             console.log("nope", 1, tvChar, snack, typeof(numYr), houseObj, background);
             alert("Please fill out all inputs!");
+            return false;
+        }
+        else if (numYr < 10 || numYr > 99 ) {
+            alert("Please enter a number between 10 and 99.");
             return false;
         }
         return true;
@@ -76,12 +81,14 @@
     } 
 
     function formatWords(input) {
-        const words = input.toLowerCase().split(" ");
+        if (input == ""){
+            return input;
+        }
+        let words = input.toLowerCase().split(" ");
         for (let i = 0; i < words.length; i++) {
             words[i] = words[i][0].toUpperCase() + words[i].substr(1);
         }
-        words.join(" ");
-        return words;
+        return words.join(" ");
     }
     
 })();

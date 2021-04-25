@@ -1,11 +1,10 @@
 (function() {
     "use strict"
 
-    console.log("here");
+    console.log("reading js");
 
     document.querySelector('button').addEventListener('click', function(event) {
         event.preventDefault();
-        console.log("submit");
         
         let form = document.forms["magForm"];
         let tvChar = formatWords(form["char"].value);
@@ -14,7 +13,7 @@
         let numYr = form["num"].value;
         let houseObj = form["house"].value;
         let correctInputs = validate(tvChar, snack, numYr, houseObj, background);
-        console.log(background);
+
         if (correctInputs) {
             let justiceAuthor = document.querySelector('#left1 p');
             let justice = document.querySelector('#left1 h3');
@@ -22,7 +21,7 @@
             let time  = document.querySelector('#right1 h5');
 
             changeBackgroundContext(background, snack);
-            console.log(tvChar);
+         
             justice.innerHTML = `Justice <b>${tvChar}</b> Elected To Supreme Court`;
             if (background == "clouds") {
                 justice.style.color = "black";
@@ -55,7 +54,7 @@
 
     async function changeBackgroundContext(image, food) {
         let mag = document.getElementById('mag');
-        console.log(image);
+  
         let midText = document.querySelector('#center1 h3');
         let midAuthor = document.querySelector('#center1 p');
         switch(image) {

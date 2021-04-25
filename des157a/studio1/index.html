@@ -11,18 +11,19 @@
     <script src="script.js" defer></script>
 </head>
 <body class="container">
+    <main>
         <!-- form inputs -->
         <section id="inputBox">
             <h4>{ MADLIBS GENERATOR }</h4>
             <form name="magForm">
                 <label for="char">tv show character:</label> <!--Supreme Court Justice-->
-                <input type="text" id="char">
+                <input type="text" id="char" required>
         
                 <label for="snack">favorite snack:</label> <!--Overpopulation-->
-                <input type="text" id="snack">
+                <input type="text" id="snack" required>
 
                 <label for="background">choose an object:</label> <!--Magazine background-->
-                <select id="background" name="objList">
+                <select id="background" name="objList" required>
                 <option value="default" selected>---</option>
                 <option value="stones">stones</option>
                 <option value="clouds">clouds</option>
@@ -30,10 +31,10 @@
                 </select>
 
                 <label for="num">lucky number (10-99):</label>  <!--the date at the top-->
-                <input type="number" id="num" min="10" max="99">
+                <input type="number" id="num" min="10" max="99" required>
 
                 <label for="house">household object:</label> <!--partnership at the bottom-->
-                <input type="text" id="house">
+                <input type="text" id="house" required>
                 
                 <button type="submit">submit</button>
             </form>
@@ -59,6 +60,7 @@
                 </aside>
             </div>
         </section>
+    </main>
     
     <footer>
         <a href="https://validator.w3.org/check?uri=referer">valid html 5 | </a>

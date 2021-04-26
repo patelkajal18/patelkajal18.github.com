@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 100px;
-    background-image: url("./images/ocean.jpg");
+    background-image: url("");
     background-size: cover;
     position: relative;
 }
@@ -19,7 +19,7 @@
 }
 
 h2 {
-    color: black;
+    color: white;
     font-size: 130px;
     margin: 0;
     text-align: center;
@@ -64,7 +64,7 @@ h5 {
 
 #left1 {
     width: 230px;
-    bottom: 10px;
+    bottom: 5px;
 }
 
 #left2 {
@@ -75,7 +75,7 @@ h5 {
 
 .leftText {
     position: absolute;
-    left: 10px;
+    left: 15px;
 }
 
 #right1 {

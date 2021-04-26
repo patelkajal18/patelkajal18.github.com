@@ -13,6 +13,7 @@
         let numYr = form["num"].value;
         let houseObj = form["house"].value;
         let correctInputs = validate(tvChar, snack, numYr, houseObj, background);
+        let logo = document.querySelector('h2');
 
         if (correctInputs) {
             let justiceAuthor = document.querySelector('#left1 p');
@@ -20,6 +21,7 @@
             let partner = document.querySelector('#left2 h5');
             let time  = document.querySelector('#right1 h5');
 
+            logo.style.color = 'white';
             changeBackgroundContext(background, snack);
          
             justice.innerHTML = `Justice <b>${tvChar}</b> Elected To Supreme Court`;
@@ -60,19 +62,19 @@
         switch(image) {
             case 'stones': 
                 mag.style.backgroundImage = "url('./images/rocks.jpg')"; 
-                midText.innerHTML = `Overpopulation of <b>${food}</b> in California`;
+                midText.innerHTML = `Overpopulation of <b>${food}</b> in California Becomes Detrimental`;
                 midText.style.color = "white";
                 midAuthor.style.color = "white";
                 break;
             case 'clouds': 
                 mag.style.backgroundImage = "url('./images/sky.jpg')"; 
-                midText.innerHTML = `Overpopulation of <b>${food}</b> in New York`;
+                midText.innerHTML = `Overpopulation of <b>${food}</b> in New York Becomes Detrimental`;
                 midText.style.color = "black";
                 midAuthor.style.color = "black";
                 break;
             default:
                 mag.style.backgroundImage = "url('./images/ocean.jpg')"; 
-                midText.innerHTML = `Overpopulation of <b>${food}</b> in Hawaii`;
+                midText.innerHTML = `Overpopulation of <b>${food}</b> in Hawaii Becomes Detrimental`;
                 midText.style.color = "white";
                 midAuthor.style.color = "white";
                 break;

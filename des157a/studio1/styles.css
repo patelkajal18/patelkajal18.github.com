@@ -15,7 +15,7 @@
 #border {
     width: 552px;
     height: 650px;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 
 h2 {
@@ -52,8 +52,8 @@ img {
 h5 {
     font-size: x-small;
     color: black;
-    font-family: 'Roboto Slab';
-    font-weight: 400; /*change to 600 in JS for input*/
+    font-family: "Roboto Mono";
+    font-weight: 400;
 }
 
 #center1 {

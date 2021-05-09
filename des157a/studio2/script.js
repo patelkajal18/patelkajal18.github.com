@@ -43,7 +43,7 @@
         }     
         planet2.style.display = "none";
         planet3.style.display = "none";
-        //planet1.style.display = "none";
+        planet4.style.display = "none";
         planet5.style.display = "none";
     });
     btn2.addEventListener('click', function(){

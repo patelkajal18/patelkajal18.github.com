@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    console.log("reading js");
 
     const container = document.querySelector('#container');
     const hotSpots = document.querySelectorAll('#container div');
@@ -10,7 +11,10 @@
     let planet1 = document.querySelector('#planet1');
     let planet2 = document.querySelector('#planet2');
     let planet3 = document.querySelector('#planet3');
+    let planet4 = document.querySelector('#planet4');
+    let planet5 = document.querySelector('#planet5');
     const overlay = document.querySelector('#overlay');
+    let zoom = document.querySelector('#zoom');
 
     telescopeBtn.addEventListener('click', function(){
         page1.style.display = "none";
@@ -36,7 +40,11 @@
             theImg.style.transform = "scale(1)";
             planet1.style.display = "none";
             perspective2(1);
-        }      
+        }     
+        planet2.style.display = "none";
+        planet3.style.display = "none";
+        //planet1.style.display = "none";
+        planet5.style.display = "none";
     });
     btn2.addEventListener('click', function(){
         if (btn2.className == "notSelected") {
@@ -53,7 +61,10 @@
             planet1.style.display = "inline";
             perspective2(2);
         }  
+        //planet1.style.display = "none";
         planet3.style.display = "none";
+        planet4.style.display = "none";
+        planet5.style.display = "none";
     });
     btn3.addEventListener('click', function(){
         if (btn3.className == "notSelected") {
@@ -67,32 +78,52 @@
         } else {
             theImg.style.transform = "scale(2)";
             planet2.style.display = "inline";
+            planet3.style.display = "none";
             perspective2(3);
         }
         planet1.style.display = "none";
+        //planet2.style.display = "none";
+        planet4.style.display = "none";
+        planet5.style.display = "none";
     });
     btn4.addEventListener('click', function(){
         if (btn4.className == "notSelected") {
             theImg.style.transform = "scale(3)";
             btn4.style.backgroundColor = "#75A1F4";
             btn4.className = "sel";
+            planet4.style.display = "inline";
+            planet4.style.animation = "grow 2s";
+            planet3.style.display = "none";
             perspective(4);
         } else {
             theImg.style.transform = "scale(2.5)";
+            planet3.style.display = "inline";
+            planet4.style.display = "none";
             perspective2(4);
         }
-        planet3.style.display = "none";
+        //planet3.style.display = "none";
+        planet2.style.display = "none";
+        planet1.style.display = "none";
+        planet5.style.display = "none";
     });
     btn5.addEventListener('click', function(){
         if (btn5.className == "notSelected") {
             theImg.style.transform = "scale(3.5)";
             btn5.style.backgroundColor = "#7589F4";
             btn5.className = "sel";
+            planet4.style.display = "none";
+            planet5.style.display = "inline";
+            planet5.style.animation = "grow 2s";
             perspective(5);
         } else {
             theImg.style.transform = "scale(3)";
+            planet4.style.display = "inline";
+            planet5.style.display = "none";
             perspective2(5);
         }
+        planet1.style.display = "none";
+        planet2.style.display = "none";
+        planet3.style.display = "none";
     });
 
     function perspective(whichBtn) {
@@ -103,34 +134,39 @@
                 btn3.style.backgroundColor = "#141414";
                 btn4.style.backgroundColor = "#141414"; 
                 btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 1X";
                 break;
             case 2: 
                 btn1.style.backgroundColor = "#75E0F4";
                 btn2.style.backgroundColor = "#75CDF4"; 
                 btn3.style.backgroundColor = "#141414"; 
                 btn4.style.backgroundColor = "#141414"; 
-                btn5.style.backgroundColor = "#141414";  
+                btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 2X";  
                 break;
             case 3: 
                 btn1.style.backgroundColor = "#75E0F4";
                 btn2.style.backgroundColor = "#75CDF4"; 
                 btn3.style.backgroundColor = "#75B4F4"; 
                 btn4.style.backgroundColor = "#141414"; 
-                btn5.style.backgroundColor = "#141414";   
+                btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 3X";   
                 break;
             case 4: 
                 btn1.style.backgroundColor = "#75E0F4";
                 btn2.style.backgroundColor = "#75CDF4"; 
                 btn3.style.backgroundColor = "#75B4F4"; 
                 btn4.style.backgroundColor = "#75A1F4"; 
-                btn5.style.backgroundColor = "#141414"; 
+                btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 4X"; 
                 break;
             case 5: 
                 btn1.style.backgroundColor = "#75E0F4";
                 btn2.style.backgroundColor = "#75CDF4"; 
                 btn3.style.backgroundColor = "#75B4F4"; 
                 btn4.style.backgroundColor = "#75A1F4"; 
-                btn5.style.backgroundColor = "#7589F4"; 
+                btn5.style.backgroundColor = "#7589F4";
+                zoom.innerHTML = "ZOOM 5X"; 
                 break;
         }
     }
@@ -148,6 +184,7 @@
                 btn3.style.backgroundColor = "#141414";
                 btn4.style.backgroundColor = "#141414"; 
                 btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 0X";
                 break;
             case 2: 
                 btn2.className = "notSelected";
@@ -158,6 +195,7 @@
                 btn3.style.backgroundColor = "#141414";
                 btn4.style.backgroundColor = "#141414"; 
                 btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 1X";
                 break;
             case 3: 
                 btn3.className = "notSelected";
@@ -165,25 +203,31 @@
                 btn5.className = "notSelected";
                 btn3.style.backgroundColor = "#141414";
                 btn4.style.backgroundColor = "#141414"; 
-                btn5.style.backgroundColor = "#141414";  
+                btn5.style.backgroundColor = "#141414"; 
+                zoom.innerHTML = "ZOOM 2X"; 
                 break;
             case 4: 
                 btn4.className = "notSelected";
                 btn5.className = "notSelected";
                 btn4.style.backgroundColor = "#141414"; 
                 btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 3X";
                 break;
             case 5: 
                 btn5.className = "notSelected";
                 btn5.style.backgroundColor = "#141414";
+                zoom.innerHTML = "ZOOM 4X";
                 break;
         }
     }
     let overlayCon = document.querySelector('#overlayContainer');
     let overlayImg = document.querySelector('#figure1');
     let overlayImgCap = document.querySelector('figcaption');
-    let overlayDesc = document.querySelector('p');
+    let overlayDesc1 = document.querySelector('#desc1');
     let exitOverlay = document.querySelector('#exitOverlay');
+    let nextImg = document.querySelector("#next");
+    let prevImg = document.querySelector("#prev");
+    let overlayTopic;
 
     exitOverlay.addEventListener('click', function(){
         overlay.style.display = "none";
@@ -192,41 +236,87 @@
 
     planet1.addEventListener('click', function() {
         overlayFill(1);
+        overlayTopic = 1;
     });
     planet2.addEventListener('click', function() {
         overlayFill(2);
+        overlayTopic = 2;
     });
     planet3.addEventListener('click', function() {
         overlayFill(3);
+        overlayTopic = 3;
+    });
+    planet4.addEventListener('click', function() {
+        overlayFill(4);
+        overlayTopic = 4;
+    });
+    planet5.addEventListener('click', function() {
+        overlayFill(5);
+        overlayTopic = 5;
+    });
+    nextImg.addEventListener('click', function(){
+        switch(overlayTopic) {
+            case 1:
+                overlayImg.style.backgroundSize = "200% 200%";
+                overlayImg.style.backgroundPosition = "-210px -210px";
+                break;
+            case 2:
+                overlayImg.style.backgroundSize = "200% 200%";
+                overlayImg.style.backgroundPosition = "-230px -230px";
+                break;
+            case 3:
+                overlayImg.style.backgroundSize = "200% 200%";
+                overlayImg.style.backgroundPosition = "-200px -200px";
+                break;
+            case 4:
+                overlayImg.style.backgroundSize = "200% 200%";
+                overlayImg.style.backgroundPosition = "-390px -250px";
+                break;
+            case 5:
+                overlayImg.style.backgroundSize = "300% 300%";
+                overlayImg.style.backgroundPosition = "-500px -490px";
+                break;
+        }
+    });
+
+    prevImg.addEventListener('click', function(){
+        overlayImg.style.backgroundSize = "100% 100%";
+        overlayImg.style.backgroundPosition = "0px";
     });
 
     function overlayFill(whichPlnt) {
-        console.log("going here?");
         
         switch(whichPlnt) {
             case 1:
                 overlayImg.style.backgroundImage = "url('./images/bowl.jpg')";
-                overlayImgCap.innerHTML = "hi";
-                overlayDesc.innerHTML = "heyyy";
+                overlayImgCap.innerHTML = "Bowl from trip to Chichen Itza.";
+                overlayDesc1.innerHTML = "> Memento from 2018 Mexico trip. <br /> > This bowl reminds me of the beauty of Mayan artwork.";
                 break;
             case 2:
                 overlayImg.style.backgroundImage = "url('./images/station.jpg')";
-                overlayImgCap.innerHTML = "hi2";
-                overlayDesc.innerHTML = "heyyy2";
+                overlayImgCap.innerHTML = "Coin from Kennedy Space Station.";
+                overlayDesc1.innerHTML = "> Memento from 2012 Florida trip. <br /> > I loved seeing the space shuttles and this marked the beginning of my interest in space.";
                 break;
             case 3:
                 overlayImg.style.backgroundImage = "url('./images/coins.jpg')";
-                overlayImgCap.innerHTML = "hi3";
-                overlayDesc.innerHTML = "heyyy3";
+                overlayImgCap.innerHTML = "Unique quarters.";
+                overlayDesc1.innerHTML = "> Memento from collecting quarters with my sister. <br /> > It reminds me of exciting childhood memories with her.";
                 break;
             case 4:
+                overlayImg.style.backgroundImage = "url('./images/turtle.jpeg')";
+                overlayImgCap.innerHTML = "Turtle from the Bahamas.";
+                overlayDesc1.innerHTML = "> Memento from 2016 Bahamas trip. <br /> > One of my favorite vacations because we stayed in Atlantis and I got to go on many waterslides.";
                 break;
             case 5:
+                overlayImg.style.backgroundImage = "url('./images/ring.jpeg')";
+                overlayImgCap.innerHTML = "Whale fin ring from Monterey.";
+                overlayDesc1.innerHTML = "> Memento from 2019 Monterey trip. <br /> > It reminds me of all the adventures I experienced and wildlife I saw."
                 break;
         }
         overlay.style.display = "block";
-        overlayContainer.style.display = "flex";
-        
+        overlayCon.style.display = "flex";
+        overlayImg.style.backgroundSize = "100% 100%";
+        overlayImg.style.backgroundPosition = "0px";
     }
     
 })();

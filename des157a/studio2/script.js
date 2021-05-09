@@ -2,10 +2,10 @@
     'use strict';
     console.log("reading js");
 
-    const container = document.querySelector('#container');
-    const hotSpots = document.querySelectorAll('#container div');
+    /* gets elements for "pages" 1 & 2 of website */
     const theImg = document.querySelector('#stars');
     const telescopeBtn = document.querySelector('#telescope');
+    const overlay = document.querySelector('#overlay');
     const page1 = document.querySelector('#page1');
     const page2 = document.querySelector('#page2');
     let planet1 = document.querySelector('#planet1');
@@ -13,21 +13,26 @@
     let planet3 = document.querySelector('#planet3');
     let planet4 = document.querySelector('#planet4');
     let planet5 = document.querySelector('#planet5');
-    const overlay = document.querySelector('#overlay');
     let zoom = document.querySelector('#zoom');
 
+    /* switches to next "page" of website */
     telescopeBtn.addEventListener('click', function(){
         page1.style.display = "none";
         page2.style.display = "inline";
         overlay.style.display = "none";
     });
 
+    /* gets button elements */
     let btn1 = document.querySelector('#btnE');
     let btn2 = document.querySelector('#btnD');
     let btn3 = document.querySelector('#btnC');
     let btn4 = document.querySelector('#btnB');
     let btn5 = document.querySelector('#btnA');
 
+    /* (1) gradient button event listeners change color based on which one is clicked 
+    *  (2) zoom into stars based on which zoom button pressed
+    *  (3) animation of "planets" coming into view starts based on which button pressed
+    */
     btn1.addEventListener('click', function(){
         if (btn1.className == "notSelected") {
             theImg.style.transform = "scale(1.5)";
@@ -61,7 +66,6 @@
             planet1.style.display = "inline";
             perspective2(2);
         }  
-        //planet1.style.display = "none";
         planet3.style.display = "none";
         planet4.style.display = "none";
         planet5.style.display = "none";
@@ -82,7 +86,6 @@
             perspective2(3);
         }
         planet1.style.display = "none";
-        //planet2.style.display = "none";
         planet4.style.display = "none";
         planet5.style.display = "none";
     });
@@ -101,7 +104,6 @@
             planet4.style.display = "none";
             perspective2(4);
         }
-        //planet3.style.display = "none";
         planet2.style.display = "none";
         planet1.style.display = "none";
         planet5.style.display = "none";
@@ -126,6 +128,7 @@
         planet3.style.display = "none";
     });
 
+    /* changes button color from default to specific for upward direction */
     function perspective(whichBtn) {
         switch (whichBtn) {
             case 1: 
@@ -171,6 +174,7 @@
         }
     }
 
+    /* changes button color from specific to default for downward direction */
     function perspective2(whichBtn) {
         switch (whichBtn) {
             case 1: 
@@ -220,6 +224,8 @@
                 break;
         }
     }
+
+    /* elements for overlay */
     let overlayCon = document.querySelector('#overlayContainer');
     let overlayImg = document.querySelector('#figure1');
     let overlayImgCap = document.querySelector('figcaption');
@@ -229,11 +235,13 @@
     let prevImg = document.querySelector("#prev");
     let overlayTopic;
 
+    /* removes the overlay when clicked */
     exitOverlay.addEventListener('click', function(){
         overlay.style.display = "none";
         overlayContainer.style.display = "none";
     });
 
+    /* fills in overlay based on each "planet" when clicked */
     planet1.addEventListener('click', function() {
         overlayFill(1);
         overlayTopic = 1;
@@ -254,6 +262,8 @@
         overlayFill(5);
         overlayTopic = 5;
     });
+
+    /* gets next image for overlay slideshow */
     nextImg.addEventListener('click', function(){
         switch(overlayTopic) {
             case 1:
@@ -279,13 +289,14 @@
         }
     });
 
+    /* gets previous image for overlay slideshow */
     prevImg.addEventListener('click', function(){
         overlayImg.style.backgroundSize = "100% 100%";
         overlayImg.style.backgroundPosition = "0px";
     });
 
+    /* fills in elements of overlay based on specific planet information */
     function overlayFill(whichPlnt) {
-        
         switch(whichPlnt) {
             case 1:
                 overlayImg.style.backgroundImage = "url('./images/bowl.jpg')";

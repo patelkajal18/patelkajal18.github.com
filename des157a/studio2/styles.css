@@ -12,6 +12,15 @@ main {
     overflow: hidden;
 }
 
+#label {
+    width: 78px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 #container {
     width: 1050px;
     height: 924px;
@@ -36,10 +45,16 @@ main {
     flex-direction: column;
     height: auto;
     width: auto;
-    top: 115px;
+    top: 85px;
     left: 580px;
     position: absolute;
 }
+
+#btnE:hover { background-color: #75E0F4;}
+#btnD:hover { background-color: #75CDF4;}
+#btnC:hover { background-color: #75B4F4;}
+#btnB:hover { background-color: #75A1F4;}
+#btnA:hover { background-color: #7589F4;}
 
 .notSelected {
     width: 78px;

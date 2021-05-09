@@ -28,7 +28,7 @@ main {
     width: 1366px;
     height: 924px;
     transition: all 3s ease;
-    filter: contrast(1.3);
+    filter: contrast(1.43);
 }
 
 #btnBar {

@@ -12,7 +12,7 @@ main {
     overflow: hidden;
 }
 
-#label {
+.label {
     width: 78px;
     font-size: 20px;
     font-weight: 100;

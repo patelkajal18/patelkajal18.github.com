@@ -9,6 +9,8 @@
     let actionArea = document.getElementById('actions');
     let player1Section = document.getElementById('player1');
     let player2Section = document.getElementById('player2');
+    const natureSound = new Audio('./sounds/nature.wav');
+    const fireSound = new Audio('./sounds/fire.wav');
 
     let gameData = {
         dice: ['./images/fire1.png', './images/air2.png', './images/earth3.png', 
@@ -61,12 +63,13 @@
         showCurrentScore(); //?
         
         if(gameData.rollSum == 2) {
+            fireSound.play();
             console.log("snake eyes were rolled");
             game.innerHTML += '<p style="font-size: 25px; background-color: #ffffff67; margin-top: 20px; width: 250px; transform: translate(60%, 0%); text-align: center;">oh snap! snake eyes!</p>';
             gameData.score[gameData.index] = 0;
             growTree("death", gameData.index, 0);
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            setTimeout(setUpTurn, 2000);
+            setTimeout(setUpTurn, 3000);
 
         } else if (gameData.roll1 == 1 || gameData.roll2 == 1) {
             console.log('one of the two dice was a 1');
@@ -118,6 +121,7 @@
 
     function growTree(condition, whichPlayer, score) {
         let tree = document.getElementById(`${gameData.tree[whichPlayer]}`);
+        
         switch(condition) {
             case "death":
                 tree.src = "./images/treeDead.png";
@@ -125,6 +129,7 @@
             case "grow":
                 if (score > 25) {  // large tree
                     tree.src = "./images/treeL.png";
+                    natureSound.play();
                 } else if (score > 15) {  // medium tree
                     tree.src = "./images/treeM.png";
                 } else if (score > 5) {                  // small tree

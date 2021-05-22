@@ -1,0 +1,119 @@
+body {
+    background-image: linear-gradient(to top, #e1f0d7, #dbf1df, #d7f1e7, #d7f1ed, #daf0f1);
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+#wrapper {
+    width: 1366px;
+    height: 728px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section p {
+    font-size: 30px;
+    margin: 0;
+}
+
+#main {
+    width: 590px;
+    margin-top: -70px;
+}
+
+#game {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+#player1{
+    width: 388px;
+    visibility: hidden;
+}
+
+#player2{
+    width: 388px;
+    visibility: hidden;
+}
+
+#gamecontrol {
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gamecontrol h2{
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+#gamecontrol p {
+    text-align: left;
+    width: 800px;
+    line-height: 1.2em;
+}
+
+#actions {
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #ffffff67;
+    border-radius: 21px;
+    border: none;
+    font-size: 20px;
+    width: 100px;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+#actions button {
+    font-size: 30px;
+    width: 142px;
+    height: 42px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#startgame {
+    font-size: 25px;
+    width: 520px;
+    height: 50px;
+    margin-top: 40px;
+}
+
+#gamescore {
+    display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+
+}
+
+a:hover {
+    color: black;
+}

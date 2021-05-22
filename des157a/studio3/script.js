@@ -9,8 +9,8 @@
     let actionArea = document.getElementById('actions');
     let player1Section = document.getElementById('player1');
     let player2Section = document.getElementById('player2');
-    const natureSound = new Audio('./sounds/nature.wav');
-    const fireSound = new Audio('./sounds/fire.wav');
+    const natureSound = new Audio('./media/nature.wav');
+    const fireSound = new Audio('./media/fire.wav');
 
     let gameData = {
         dice: ['./images/fire1.png', './images/air2.png', './images/earth3.png', 

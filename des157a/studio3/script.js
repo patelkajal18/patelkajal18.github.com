@@ -24,7 +24,7 @@
     };
 
     startGame.addEventListener("click", function(){
-        gameControl.innerHTML = '<h2 style="font-size: 30px;">... game has started ...</h2>';
+        gameControl.innerHTML = '<h2 style="font-size: 30px;">~ game has started ~</h2>';
         gameControl.innerHTML += '<button id="quit">quit</button>';
         player1Section.style.visibility = "visible";
         player2Section.style.visibility = "visible";
@@ -95,9 +95,9 @@
 
     function checkWinningCondition() {
         if(gameData.score[gameData.index] > gameData.gameEnd) {
-            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points</h2>`;
             actionArea.innerHTML = '';
-            gameControl.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points</h2>` + '<button id="quit">quit</button>'
+            gameControl.innerHTML = `<h2 style="font-size: 25px">@${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!!</h2>` + '<button id="quit">quit</button>'
             showCurrentScore();
             document.getElementById('quit').innerHTML = "<button style='width: 130px'> new game </button>";
             document.getElementById('quit').addEventListener('click', function(){

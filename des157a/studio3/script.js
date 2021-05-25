@@ -1,5 +1,8 @@
 (function() {
     "use strict"
+    console.log("reading js");
+
+    // html objects
     let startGame = document.getElementById('startgame');
     let gameControl = document.getElementById('gamecontrol');
     let game = document.getElementById('game');
@@ -11,7 +14,8 @@
     let player2Section = document.getElementById('player2');
     const natureSound = new Audio('./media/nature.wav');
     const fireSound = new Audio('./media/fire.wav');
-
+    
+    // object holds data for the game
     let gameData = {
         dice: ['./images/fire1.png', './images/air2.png', './images/earth3.png', 
             './images/water4.png'], //change this to elements photos.
@@ -25,6 +29,7 @@
         tree: ["tree1", "tree2"]
     };
 
+    // "starts" the game when user clicks button
     startGame.addEventListener("click", function(){
         gameControl.innerHTML = '<h2 style="font-size: 30px;">~ game has started ~</h2>';
         gameControl.innerHTML += '<button id="quit">quit</button>';
@@ -42,6 +47,7 @@
 
     gameData.index = Math.round(Math.random());
 
+    // changes the turn for each player & shuffles "cards"
     function setUpTurn() {
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         game.innerHTML = `<img class="card" src="./images/blank.png"> <img class="card" src="./images/blank.png">`;
@@ -53,6 +59,7 @@
         });
     }
 
+    // algorithm to shuffle cards
     function throwDice() {
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 4) + 1;
@@ -60,8 +67,9 @@
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         game.innerHTML = `<img class="card" src="${gameData.dice[gameData.roll1-1]}"> <img class="card" src="${gameData.dice[gameData.roll2-1]}">`;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
-        showCurrentScore(); //?
+        showCurrentScore(); 
         
+        // snake eyes were rolles
         if(gameData.rollSum == 2) {
             fireSound.play();
             console.log("snake eyes were rolled");
@@ -71,15 +79,15 @@
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 3000);
 
-        } else if (gameData.roll1 == 1 || gameData.roll2 == 1) {
+        } else if (gameData.roll1 == 1 || gameData.roll2 == 1) { // 1 snake eye was rolled
             console.log('one of the two dice was a 1');
             growTree("stop", gameData.index, gameData.score[gameData.index]);
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML += `<p id="message" style="text-align: center; font-size: 20px; background-color: #ffffff67;; margin-top: 20px;">sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
 
-        } else {
-            console.log("the game proceeds");
+        } else { // how the game normally proceeds after cards are shuffled
+            console.log("the game proceeds"); 
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             growTree("grow", gameData.index, gameData.score[gameData.index]);
             actionArea.innerHTML = '<button id="rollagain">play</button> <button id="pass">pass</button>';
@@ -96,6 +104,7 @@
         }
     }
 
+    // checks to see if a player won the game
     function checkWinningCondition() {
         if(gameData.score[gameData.index] > gameData.gameEnd) {
             score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points</h2>`;
@@ -114,11 +123,13 @@
         }
     }
 
+    // displays the scores for each player
     function showCurrentScore() {
         score1.innerHTML = `<p><strong>${gameData.score[0]}</strong><\p>`;
         score2.innerHTML = `<p><strong>${gameData.score[1]}</strong><\p>`;
     }
 
+    // "grows" each players tree based on their points earned
     function growTree(condition, whichPlayer, score) {
         let tree = document.getElementById(`${gameData.tree[whichPlayer]}`);
         

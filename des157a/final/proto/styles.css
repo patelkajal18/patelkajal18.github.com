@@ -1,0 +1,104 @@
+body {
+    background-color: black;
+}
+main {
+    width: 1366px;
+    height: 728px;
+    margin: 0 auto;
+    background-image: url("./images/pens.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.pen {
+    width: 175px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 100px;
+    border: none;
+    position: absolute;
+}
+
+.pen:hover {
+    background-color: #ffffff30;
+}
+
+#penLGr { bottom: 50px; left: 140px; }
+#penDGr { bottom: 110px; left: 280px; }
+#penB { bottom: 75px; left: 440px; }
+#penP { bottom: 110px; left: 585px; }
+#penDGy { bottom: 90px; left: 730px; }
+#penLGy { bottom: 125px; left: 880px; }
+#penW { bottom: 85px; left: 1040px; }
+
+#overlay {
+    width: 450px;
+    height: 728px;
+    position: absolute;
+    right: 0;
+    background-image: url("./images/wall.jpg");
+    background-size: 100% 100%;
+    visibility: hidden;
+}
+
+#overlayBtn {
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: black;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+    position: absolute;
+}
+
+#overlayImg {
+    width: 330px;
+    height: 360px;
+    background-image: url(./images/fish.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 60px;
+    top: 125px;
+    border: 5px solid #6B926E;
+}
+
+#imgTape {
+    width: 150px;
+    height: 50px;
+    background-color: #ffffff76;
+    border: 1px solid #707070;
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+#overlayText {
+    width: 360px;
+    height: 60px;
+    color: black;
+    background-color: #ffffff90;
+    position: absolute;
+    padding: 20px;
+    left: 30px;
+    border-radius: 25px;
+    top: 520px;
+}
+
+.pageBtn {
+    background-color: #ffffff70;
+    border-radius: 49px;
+    color: black;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 30px; 
+    right: 40px;
+}
+
+.pageBtn:hover {
+    background-color: white;
+}
+
+#toSecPage { width: 260px; height: 50px; }

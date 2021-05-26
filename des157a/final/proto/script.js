@@ -2,6 +2,19 @@
     "use strict"
     console.log("reading js");
 
+    let body = document.querySelector('body');
+    let main = document.querySelector('main');
+    let toSecPage = document.getElementById("toSecPage");
+    let toThirdPage = document.getElementById("toThirdPage");
+    let sec1 = document.getElementById("pg1");
+    let sec2 = document.getElementById("pg2");
+    sec2.style.visibility = "hidden";
+    let sec3 = document.getElementById("pg3");
+    sec3.style.visibility = "hidden";
+    let mag = document.getElementById('mag');
+    let mag3 = document.getElementById('mag3');
+
+
     let overlayImg = document.getElementById("overlayImg");
     let overlay = document.getElementById("overlay");
     let overlayText = document.getElementById("overlayText");
@@ -14,6 +27,24 @@
     let penDGy = document.getElementById("penDGy");
     let penLGy = document.getElementById("penLGy");
     let penW = document.getElementById("penW");
+
+    toSecPage.addEventListener("click", function(){
+        sec1.style.visibility = "hidden";
+        sec2.style.visibility = "visible";
+        main.style.background = "transparent";
+        body.style.backgroundImage = "url('./images/wallBackground.jpg')";
+    })
+
+    toThirdPage.addEventListener("click", function(){
+        sec1.style.display = "none"
+        sec2.style.display = "none";
+        sec3.style.visibility = "visible";
+        main.style.backgroundImage = "none";
+        main.style.position = "relative";
+        main.style.height = "1500px";
+        body.style.height = "1500px";
+        body.style.backgroundImage = "url('./images/wallBackground.jpg')";
+    })
 
     penLGr.addEventListener("click", function(){
         console.log("light green clicked");
@@ -48,8 +79,8 @@
 
         switch(whichPen) {
             case "penLGr":
-                overlayImg.style.backgroundImage = "url('./images/')";
-                overlayImg.style.border = "5px solid #";
+                overlayImg.style.backgroundImage = "url('./images/leaf.jpg')";
+                overlayImg.style.border = "5px solid #ADAF4E";
                 overlayText.innerHTML = "blah1";
                 break;
             case "penDGr":
@@ -58,31 +89,158 @@
                 overlayText.innerHTML = "blah2";
                 break;
             case "penB":
-                overlayImg.style.backgroundImage = "url('./images/')";
-                overlayImg.style.border = "5px solid #";
+                overlayImg.style.backgroundImage = "url('./images/dragon.jpg')";
+                overlayImg.style.border = "5px solid #049FBA";
                 overlayText.innerHTML = "blah3";
                 break;
             case "penP":
-                overlayImg.style.backgroundImage = "url('./images/')";
-                overlayImg.style.border = "5px solid #";
+                overlayImg.style.backgroundImage = "url('./images/abstract.jpg')";
+                overlayImg.style.border = "5px solid #A78895";
                 overlayText.innerHTML = "blah4";
                 break;
             case "penLGy":
-                overlayImg.style.backgroundImage = "url('./images/')";
-                overlayImg.style.border = "5px solid #";
+                overlayImg.style.backgroundImage = "url('./images/eyes.jpg')";
+                overlayImg.style.border = "5px solid #B2A998";
                 overlayText.innerHTML = "blah5";
                 break;
             case "penDGy":
-                overlayImg.style.backgroundImage = "url('./images/')";
-                overlayImg.style.border = "5px solid #";
+                overlayImg.style.backgroundImage = "url('./images/itachi.jpg')";
+                overlayImg.style.border = "5px solid #746A5B";
                 overlayText.innerHTML = "blah6";
                 break;
             case "penW":
-                overlayImg.style.backgroundImage = "url('./images/')";
-                overlayImg.style.border = "5px solid #";
+                overlayImg.style.backgroundImage = "url('./images/appa.jpg')";
+                overlayImg.style.border = "5px solid #E2D7C2";
                 overlayText.innerHTML = "blah7";
                 break;
         }
+    }
+
+    // Page 2 JS
+
+    document.querySelector('.buttonPg2').addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        let form = document.forms["magForm"];
+        let tvChar = formatWords(form["char"].value);
+        let snack = formatWords(form["snack"].value);
+        let background = form["background"].value;
+        let numYr = form["num"].value;
+        let houseObj = form["house"].value;
+        let correctInputs = validate(tvChar, snack, numYr, houseObj, background);
+        let logo = document.querySelector('h2');
+        let logoC = document.querySelector('#h2C');
+
+        if (correctInputs) {
+            let justiceAuthor = document.querySelector('#left1 p');
+            let justice = document.querySelector('#left1 h3');
+            let partner = document.querySelector('#left2 h5');
+            let time  = document.querySelector('#right1 h5');
+
+            let justiceAuthorC = document.querySelector('#left1C p');
+            let justiceC = document.querySelector('#left1C h3');
+            let partnerC = document.querySelector('#left2C h5');
+            let timeC  = document.querySelector('#right1C h5');
+
+            logo.style.color = 'white';
+            logoC.style.color = 'white';
+            changeBackgroundContext(background, snack, logo, logoC);
+            
+            justice.innerHTML = `Justice <span style="font-weight:800;">${tvChar}</span> Elected To Supreme Court`;
+            justiceC.innerHTML = `Justice <span style="font-weight:800;">${tvChar}</span> Elected To Supreme Court`;
+            if (background == "clouds") {
+                justice.style.color = "black";
+                justiceAuthor.style.color = "black";
+                justiceC.style.color = "black";
+                justiceAuthorC.style.color = "black";
+            } else {
+                justice.style.color = "white";
+                justiceAuthor.style.color = "white";
+                justiceC.style.color = "white";
+                justiceAuthorC.style.color = "white";
+            }
+            partner.innerHTML = `IN PARTNERSHIP WITH THE WORLD <span style="font-weight:800;">${houseObj.toUpperCase()}</span> COUNCIL`;
+            time.innerHTML = `April 20, <b>30${numYr}</b>`;
+            partnerC.innerHTML = `IN PARTNERSHIP WITH THE WORLD <span style="font-weight:800;">${houseObj.toUpperCase()}</span> COUNCIL`;
+            timeC.innerHTML = `April 20, <b>30${numYr}</b>`;
+        }
+    });
+
+    function validate(tvChar, snack, numYr, houseObj, background) {
+        if (tvChar == "" || snack == "" || numYr == "" || houseObj == "" || background == "default") {
+            console.log("nope", 1, tvChar, snack, typeof(numYr), houseObj, background);
+            alert("Please fill out all inputs!");
+            return false;
+        }
+        else if (numYr < 10 || numYr > 99 ) {
+            alert("Please enter a number between 10 and 99.");
+            return false;
+        }
+        return true;
+    }
+
+    async function changeBackgroundContext(image, food, logo, logoC) {
+        //let mag = document.getElementById('mag');
+  
+        let midText = document.querySelector('#center1 h3');
+        let midAuthor = document.querySelector('#center1 p');
+        let midTextC = document.querySelector('#center1C h3');
+        let midAuthorC = document.querySelector('#center1C p');
+        switch(image) {
+            case 'stones': 
+                mag.style.backgroundImage = "url('./images/rocks.jpg')";
+                mag3.style.backgroundImage = "url('./images/rocks.jpg')";
+
+                midText.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in California Becomes Detrimental`;
+                midText.style.color = "white";
+                midAuthor.style.color = "white";
+                midTextC.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in California Becomes Detrimental`;
+                midTextC.style.color = "white";
+                midAuthorC.style.color = "white";
+
+                logo.style.color = "#d50000";
+                logoC.style.color = "#d50000";
+                break;
+            case 'clouds': 
+                mag.style.backgroundImage = "url('./images/sky.jpg')"; 
+                mag3.style.backgroundImage = "url('./images/sky.jpg')"; 
+
+                midText.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in New York Becomes Detrimental`;
+                midText.style.color = "black";
+                midAuthor.style.color = "black";
+                midTextC.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in New York Becomes Detrimental`;
+                midTextC.style.color = "black";
+                midAuthorC.style.color = "black";
+
+                logo.style.color = "white";
+                logoC.style.color = "white";
+                break;
+            default: //ocean
+                mag.style.backgroundImage = "url('./images/ocean.jpg')";
+                mag3.style.backgroundImage = "url('./images/ocean.jpg')";  
+                
+                midText.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in Hawaii Becomes Detrimental`;
+                midText.style.color = "white";
+                midAuthor.style.color = "white";
+                midTextC.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in Hawaii Becomes Detrimental`;
+                midTextC.style.color = "white";
+                midAuthorC.style.color = "white";
+                
+                logo.style.color = "black";
+                logoC.style.color = "black";
+                break;
+          }
+    } 
+
+    function formatWords(input) {
+        if (input == ""){
+            return input;
+        }
+        let words = input.toLowerCase().split(" ");
+        for (let i = 0; i < words.length; i++) {
+            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+        return words.join(" ");
     }
 
 })() 

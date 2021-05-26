@@ -13,6 +13,7 @@
 <body>
     <main>
         <section id="pg1">
+            <h1>~ COLLAGE GENERATOR ~</h1>
             <button class="pen" id="penLGr"></button>
             <button class="pen" id="penDGr"></button>
             <button class="pen" id="penB"></button>
@@ -30,10 +31,81 @@
         </section>
 
         <section id="pg2">
+            <!-- form inputs -->
+            <section id="inputBox">
+                <h4>~ Design a Magazine ~</h4>
+                <form name="magForm">
+                    <label for="char">Tv Show Character:</label> <!--Supreme Court Justice-->
+                    <input type="text" id="char" required>
+            
+                    <label for="snack">Favorite Snack:</label> <!--Overpopulation-->
+                    <input type="text" id="snack" required>
 
+                    <label for="background">Choose an Object:</label> <!--Magazine background-->
+                    <select id="background" name="objList">
+                    <option value="default" selected>---</option>
+                    <option value="stones">Stones</option>
+                    <option value="clouds">Clouds</option>
+                    <option value="waves">Waves</option>
+                    </select>
+
+                    <label for="num">Lucky Number (10-99):</label>  <!--the date at the top-->
+                    <input type="number" id="num" min="10" max="99" required>
+
+                    <label for="house">Household Object:</label> <!--partnership at the bottom-->
+                    <input type="text" id="house" required>
+                    
+                    <button class="buttonPg2" type="submit">submit</button>
+                </form>
+            </section>
+            
+            
+            <section id="mag">
+                <div id="border">
+                    <h2 >TIME</h2>
+                    <aside id="center1">
+                        <h3>Overpopulation of Fish in the Oceans Becomes Detrimental</h3>
+                        <p>By ALINA KIM</p>
+                    </aside>
+                    <aside class="leftText" id="left1">
+                        <h3>Justice Brown Elected To Supreme Court</h3>
+                        <p>By KAJAL PATEL</p>
+                    </aside>
+                    <aside class="leftText" id="left2">
+                        <h5>IN PARTNERSHIP WITH THE WORLD ECONOMIC COUNCIL</h5>
+                    </aside>
+                    <aside id="right1">
+                        <h5>April 21, 2021</h5>
+                    </aside>
+                </div>
+            </section>
+            <div id="magTape1" class="tape"></div>
+            <div id="magTape2" class="tape"></div>
+
+            <button class="pageBtn" id="toThirdPage">create collage --></button>
         </section>
-        <section id="pg3">
 
+        <section id="pg3">
+            <div id="magPg3"></div>
+            <section id="mag3">
+                <div id="border3">
+                    <h2 id="h2C">TIME</h2>
+                    <aside id="center1C">
+                        <h3>Overpopulation of Fish in the Oceans Becomes Detrimental</h3>
+                        <p>By ALINA KIM</p>
+                    </aside>
+                    <aside class="leftText" id="left1C">
+                        <h3>Justice Brown Elected To Supreme Court</h3>
+                        <p>By KAJAL PATEL</p>
+                    </aside>
+                    <aside class="leftText" id="left2C">
+                        <h5>IN PARTNERSHIP WITH THE WORLD ECONOMIC COUNCIL</h5>
+                    </aside>
+                    <aside id="right1C">
+                        <h5>April 21, 2021</h5>
+                    </aside>
+                </div>
+            </section>
         </section>
 
 

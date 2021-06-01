@@ -269,7 +269,7 @@ input:focus {
     display: flex;
     font-weight: 800;
     font-family: 'Raleway';
-    border: 10px solid white;
+    border: 5px solid #8a8a8a4d;
 }
 
 form {

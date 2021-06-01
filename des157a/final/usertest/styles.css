@@ -1,12 +1,15 @@
 body {
-    background-color: black;
+    background-color: #E4E4E4;
+    font-family: 'Raleway';
+    font-weight: 800;
 }
 main {
     width: 1366px;
     height: 728px;
     margin: 0 auto;
-    background-image: url("./images/pens.jpg");
-    background-size: 100% 100%;
+    background-image: url("./images/pensGray.jpg");
+    background-size: 100% 110%;
+    background-position: center center;
     position: relative;
 }
 
@@ -16,16 +19,18 @@ h1 {
     font-size: 43px;
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 800;
+    border: 1px solid black;
 }
 
 .pen {
     width: 175px;
-    height: 400px;
+    height: 450px;
     background-color: transparent;
     border-radius: 100px;
     border: none;
@@ -33,19 +38,19 @@ h1 {
 }
 
 .pen:hover {
-    background-color: #ffffff30;
+    background-color: #ffffff60;
 }
 
-#penLGr { bottom: 50px; left: 140px; }
-#penDGr { bottom: 110px; left: 280px; }
-#penB { bottom: 75px; left: 440px; }
-#penP { bottom: 110px; left: 585px; }
-#penDGy { bottom: 90px; left: 730px; }
-#penLGy { bottom: 125px; left: 880px; }
-#penW { bottom: 85px; left: 1040px; }
+#penLGr { bottom: -10px; left: 140px; }
+#penDGr { bottom: 50px; left: 280px; }
+#penB { bottom: 15px; left: 440px; }
+#penP { bottom: 50px; left: 585px; }
+#penDGy { bottom: 30px; left: 730px; }
+#penLGy { bottom: 65px; left: 880px; }
+#penW { bottom: 25px; left: 1040px; }
 
 #overlay {
-    width: 450px;
+    width: 500px;
     height: 728px;
     position: absolute;
     right: 0;
@@ -85,10 +90,10 @@ h1 {
     background-size: 100%;
     overflow: hidden;
     position: absolute;
-    left: 60px;
+    left: 80px;
     top: 125px;
     background-position: top;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 10px solid #6B926E;
     opacity: 1;
 }
@@ -102,9 +107,9 @@ h1 {
 
 #imgTape {
     width: 150px;
-    height: 50px;
-    top: 100px;
-    left: 150px;
+    height: 40px;
+    top: 105px;
+    left: 180px;
     opacity: 1;
 }
 
@@ -115,13 +120,13 @@ h1 {
     background-color: #ffffff;
     position: absolute;
     padding: 20px;
-    left: 30px;
+    left: 50px;
     /* border-radius: 25px; */
     top: 520px;
     opacity: 1;
     border: 1px solid #707070;
-    font-weight: bold;
     font-size: large;
+    font-weight: 800;
 }
 
 .pageBtn {
@@ -130,10 +135,10 @@ h1 {
     border: 1px solid #707070;
     color: black;
     font-size: 20px;
-    font-weight: bold;
     position: absolute;
     bottom: 30px;
     right: 40px;
+    font-weight: 800;
 }
 
 .pageBtn:hover {
@@ -148,6 +153,12 @@ h1 {
     left: 41%;
  }
 
+#to1bPage {
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    top: 90%;
+}
 /* start of page 2 style */
 
 #toThirdPage { width: 200px; height: 50px; }
@@ -157,6 +168,7 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 728px;
+    font-weight: 800;
 }
 
 #mag {
@@ -255,6 +267,9 @@ input:focus {
     text-align: center;
     flex-direction: column;
     display: flex;
+    font-weight: 800;
+    font-family: 'Raleway';
+    border: 10px solid white;
 }
 
 form {
@@ -286,7 +301,7 @@ select {
 
 h4 {
     color: black;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: lighter;
     margin-bottom: 30px;
     margin-top: 22px;
@@ -319,18 +334,18 @@ label {
 }
 
 #magTape1 {
-    width: 125px;
+    width: 160px;
     height: 50px;
-    top: 10px;
-    right: 85px;
+    top: 80px;
+    right: 410px;
     transform: rotate(45deg);
 }
 
 #magTape2 {
-    width: 125px;
+    width: 160px;
     height: 50px;
-    bottom: 15px;
-    left: 600px;
+    bottom: 85px;
+    left: 410px;
     transform: rotate(45deg);
 }
 
@@ -403,4 +418,6 @@ label {
     background-image: url("./images/background1b.jpg");
     background-size: 100% 100%;
     position: relative;
+    font-weight: 800;
+    font-family: 'Raleway';
 }

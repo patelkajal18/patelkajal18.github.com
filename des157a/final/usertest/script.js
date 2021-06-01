@@ -4,9 +4,9 @@
 
     alert("Welcome! This a user test for my final project. Click ok to learn more!");
     alert("Before you start looking around here are three things to keep in mind.");
-    alert("First, ");
-    alert("Second, ");
-    alert("Third, ");
+    alert("First, try to figure out how to view my art gallery.");
+    alert("Second, see if you can find all of the buttons and test them out.");
+    alert("Third, try to visit the final screen for a surprise!");
     alert("Thanks for your participation!");
 
     let body = document.querySelector('body');
@@ -98,38 +98,38 @@
         switch(whichPen) {
             case "penLGr":
                 overlayImg.style.backgroundImage = "url('./images/leaf.jpg')";
-                overlayImg.style.border = "5px solid #ADAF4E";
+                overlayImg.style.border = "8px solid #ADAF4E";
                 overlayText.innerHTML = "I painted these dandelions the summer before collage.";
                 break;
             case "penDGr":
                 overlayImg.style.backgroundImage = "url('./images/fish.jpg')";
-                overlayImg.style.border = "5px solid #6B926E";
+                overlayImg.style.border = "8px solid #6B926E";
                 overlayText.innerHTML = "I drew these koi fish during quaratine.";
                 break;
             case "penB":
                 overlayImg.style.backgroundImage = "url('./images/dragon.jpg')";
-                overlayImg.style.border = "5px solid #049FBA";
+                overlayImg.style.border = "8px solid #049FBA";
                 overlayText.innerHTML = "I painted this fictional dragon in 2020.";
                 break;
             case "penP":
                 overlayImg.style.backgroundImage = "url('./images/abstract.jpg')";
-                overlayImg.style.border = "5px solid #A78895";
+                overlayImg.style.border = "8px solid #A78895";
                 overlayText.innerHTML = "Using paint swatches, I drew this abstract design.";
                 break;
             case "penLGy":
                 overlayImg.style.backgroundImage = "url('./images/eyes.jpg')";
-                overlayImg.style.border = "5px solid #B2A998";
+                overlayImg.style.border = "8px solid #B2A998";
                 overlayImg.style.backgroundPosition = "center center";
                 overlayText.innerHTML = "This is one of the first drawings I drew in my dorm.";
                 break;
             case "penDGy":
                 overlayImg.style.backgroundImage = "url('./images/itachi.jpg')";
-                overlayImg.style.border = "5px solid #746A5B";
+                overlayImg.style.border = "8px solid #746A5B";
                 overlayText.innerHTML = "This drawing of Itachi was done in 2019.";
                 break;
             case "penW":
                 overlayImg.style.backgroundImage = "url('./images/appa.jpg')";
-                overlayImg.style.border = "5px solid #E2D7C2";
+                overlayImg.style.border = "8px solid #E2D7C2";
                 overlayText.innerHTML = "Appa was drawn in the beginning of 2021.";
                 break;
         }

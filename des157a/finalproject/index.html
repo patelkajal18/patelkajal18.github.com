@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Test</title>
+    <title>Final Project</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
@@ -24,7 +24,7 @@
             <button class="pageBtn" id="to1bPage">view collage --></button>
             <div id="overlay">
                 <div id="overlayBackground"></div>
-                <button id="overlayBtn">x</button>
+                <button id="overlayBtn">✕</button>
                 <div id="overlayImg"></div>
                 <div id="imgTape" class="tape"></div>
                 <p id="overlayText"></p>
@@ -34,10 +34,12 @@
             
         <section id="pg1b">
             <button class="pageBtn" id="toSecPage">I'm Feeling Lucky</button>
+            <button class="backBtn" id="backHome"><-- home</button>
         </section>
 
         <section id="pg2">
             <!-- form inputs -->
+            <button class="backBtn" id="backCol1b"><-- collage</button>
             <section id="inputBox">
                 <h4>~ Tell Me About Yourself ~</h4>
                 <form name="magForm">
@@ -47,12 +49,12 @@
                     <label for="snack">Favorite Snack:</label> <!--Overpopulation-->
                     <input type="text" id="snack" required>
 
-                    <label for="background">Choose an Object:</label> <!--Magazine background-->
+                    <label for="background">Choose a Category:</label> <!--Magazine background-->
                     <select id="background" name="objList">
                     <option value="default" selected>---</option>
-                    <option value="stones">Stones</option>
-                    <option value="clouds">Clouds</option>
-                    <option value="waves">Waves</option>
+                    <option value="space">Space</option> <!--astro-->
+                    <option value="nature">Nature</option> <!--branch, daisy, yellow-->
+                    <option value="simple">Simple</option> <!--face-->
                     </select>
 
                     <label for="num">Lucky Number (10-99):</label>  <!--the date at the top-->
@@ -92,6 +94,7 @@
         </section>
 
         <section id="pg3">
+            <button class="backBtn" id="backForm"><-- form</button>
             <div id="magPg3"></div>
             <section id="mag3">
                 <div id="border3">

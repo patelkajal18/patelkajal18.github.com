@@ -445,3 +445,19 @@ label {
     font-weight: 800;
     font-family: 'Raleway';
 }
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: white;
+}

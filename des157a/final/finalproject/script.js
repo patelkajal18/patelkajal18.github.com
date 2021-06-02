@@ -268,7 +268,7 @@
         switch(image) {
             case 'space': 
                 mag.style.backgroundImage = "url('./images/rocks.jpg')";
-                mag3.style.backgroundImage = "url('./images/astro.jpeg')";
+                mag3.style.backgroundImage = "url('./images/space.jpg')";
                 
 
                 midText.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in California Becomes Detrimental`;
@@ -283,7 +283,7 @@
                 break;
             case 'nature': 
                 mag.style.backgroundImage = "url('./images/sky.jpg')"; 
-                let imgArray = ['./images/daisy.jpeg', './images/branch.jpeg', './images/yellow.jpeg'];
+                let imgArray = ['./images/daisy.jpg', './images/branch.jpg', './images/yellow.jpg'];
                 let index = function() {
                     return Math.floor(Math.random() * 3);
                 }();
@@ -303,7 +303,7 @@
             default: //simple
                 mag.style.backgroundImage = "url('./images/ocean.jpg')";
                 //mag3.style.backgroundImage = "url('./images/ocean.jpg')";
-                mag3.style.backgroundImage = "url('./images/face.jpeg')";  
+                mag3.style.backgroundImage = "url('./images/face.jpg')";  
                 
                 midText.innerHTML = `Overpopulation of <span style="font-weight:800;">${food}</span> in Hawaii Becomes Detrimental`;
                 midText.style.color = "white";

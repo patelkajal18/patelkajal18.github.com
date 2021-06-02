@@ -293,7 +293,8 @@ input:focus {
     display: flex;
     font-weight: 800;
     font-family: 'Raleway';
-    border: 5px solid #8a8a8a4d;
+    box-shadow: -1px -1px 0 #9fbcff, 1px -1px 0 #9fbcff, -1px 1px 0 #9fbcff, 1px 1px 0 #9fbcff, 0px 3px 6px #ffffff6b;
+
 }
 
 form {
@@ -321,6 +322,12 @@ select {
     border-radius: 15px;
     outline: none;
     box-shadow: inset 0px 3px 10px 2px rgb(187 187 187 / 50%);
+}
+
+select:focus {
+    outline: none;
+    background-color: #EEE;
+    color: black;
 }
 
 h4 {

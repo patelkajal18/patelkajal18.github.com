@@ -468,3 +468,54 @@ a {
 a:hover {
     color: white;
 }
+
+.square {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 455px;
+    height: 500px;
+    position: absolute;
+    /* margin: 0 auto; */
+    margin-top: 5px;
+}
+
+#sq1 {top: 0; left: 0;}
+#sq2 {top: 0; left: 455px;}
+#sq3 {top: 0; left: 910px;}
+#sq4 {top: 500px; left: 0}
+#sq5 {top: 1000px; left: 0}
+#sq6 {top: 1000px; left: 455px;}
+#sq7 {
+    top: 500px; 
+    left: 910px;
+    height: 1000px;
+}
+
+
+.squareText {
+    color: black;
+    width: 415px;
+    height: 460px;
+    text-align: center;
+    background-image: url(./images/wallTransparent.png);
+    position: absolute;
+    padding: 20px;
+    opacity: 1;
+    font-size: larger;
+    font-weight: 800;
+}
+
+.squareTextLong {
+    color: black;
+    width: 415px;
+    height: 960px;
+    text-align: center;
+    background-image: url(./images/wallTransparent.png);
+    position: absolute;
+    padding: 20px;
+    opacity: 1;
+    font-size: larger;
+    font-weight: 800;
+}

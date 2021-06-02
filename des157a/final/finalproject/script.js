@@ -87,16 +87,6 @@
         body.style.backgroundImage = "url('./images/wallBackground.jpg')";
     })
 
-    /* toThirdPage.addEventListener("click", function(){
-        sec1.style.display = "none"
-        sec2.style.display = "none";
-        sec3.style.display = "flex";
-        main.style.backgroundImage = "none";
-        main.style.position = "relative";
-        main.style.height = "1500px";
-        body.style.height = "1500px";
-        body.style.backgroundImage = "url('./images/wallBackground.jpg')";
-    }) */
 
     penLGr.addEventListener("click", function(){
         console.log("light green clicked");
@@ -136,41 +126,121 @@
             case "penLGr":
                 overlayImg.style.backgroundImage = "url('./images/leaf.jpg')";
                 overlayImg.style.border = "8px solid #ADAF4E";
-                overlayText.innerHTML = "I painted these dandelions the summer before collage.";
+                overlayText.innerHTML = `${changeText(5)}`;
                 break;
             case "penDGr":
                 overlayImg.style.backgroundImage = "url('./images/fish.jpg')";
                 overlayImg.style.border = "8px solid #6B926E";
-                overlayText.innerHTML = "I drew these koi fish during quaratine.";
+                overlayText.innerHTML = `${changeText(1)}`;
                 break;
             case "penB":
                 overlayImg.style.backgroundImage = "url('./images/dragon.jpg')";
                 overlayImg.style.border = "8px solid #049FBA";
-                overlayText.innerHTML = "I painted this fictional dragon in 2020.";
+                overlayText.innerHTML = `${changeText(3)}`;
                 break;
             case "penP":
                 overlayImg.style.backgroundImage = "url('./images/abstract.jpg')";
                 overlayImg.style.border = "8px solid #A78895";
-                overlayText.innerHTML = "Using paint swatches, I drew this abstract design.";
+                overlayText.innerHTML = `${changeText(7)}`;
                 break;
             case "penLGy":
                 overlayImg.style.backgroundImage = "url('./images/eyes.jpg')";
                 overlayImg.style.border = "8px solid #B2A998";
                 overlayImg.style.backgroundPosition = "center center";
-                overlayText.innerHTML = "This is one of the first drawings I drew in my dorm.";
+                overlayText.innerHTML = `${changeText(4)}`;
                 break;
             case "penDGy":
                 overlayImg.style.backgroundImage = "url('./images/itachi.jpg')";
                 overlayImg.style.border = "8px solid #746A5B";
-                overlayText.innerHTML = "This drawing of Itachi was done in 2019.";
+                overlayText.innerHTML = `${changeText(6)}`;
                 break;
             case "penW":
                 overlayImg.style.backgroundImage = "url('./images/appa.jpg')";
                 overlayImg.style.border = "8px solid #E2D7C2";
-                overlayText.innerHTML = "Appa was drawn in the beginning of 2021.";
+                overlayText.innerHTML = `${changeText(2)}`;
                 break;
         }
     }
+
+    // Page 1b JS
+
+    let sq1 = document.getElementById('sq1');
+    let sq2 = document.getElementById('sq2');
+    let sq3 = document.getElementById('sq3');
+    let sq4 = document.getElementById('sq4');
+    let sq5 = document.getElementById('sq5');
+    let sq6 = document.getElementById('sq6');
+    let sq7 = document.getElementById('sq7');
+    let sqs = [sq1, sq2, sq3, sq4, sq5, sq6, sq7];
+
+    for(let i = 0; i < 7; i++) {
+        sqs[i].addEventListener('mouseover', function(event){
+            hoverOnEffect(sqs[i], i+1);
+        });
+        sqs[i].addEventListener('mouseout', function(event){
+            hoverOffEffect(sqs[i], i+1);
+        });
+    }
+    
+
+    /* sq1.addEventListener('mouseover', function(event){
+        hoverOnEffect(sq1, 1);
+    });
+    sq1.addEventListener('mouseout', function(event){
+        hoverOffEffect(sq1);
+    });
+ */
+
+    function hoverOnEffect(sq, index) {
+        if (index == 1) {
+            backSec1.style.visibility = "hidden";
+        }
+        let value = changeText(index);
+        if (index != 7) {
+            sq.innerHTML =  `<p class="squareText">${value}<p>`;
+        } else {
+            sq.innerHTML =  `<p class="squareTextLong">${value}<p>`;
+        }
+    }
+
+    function hoverOffEffect(sq, index) {
+        if (index == 1) {
+            backSec1.style.visibility = "visible";
+        }
+        sq.innerHTML = ``;
+    }
+
+    function changeText(index) {
+        let text;
+        switch(index) {
+            case 1:
+                text = "I drew these koi fish during quaratine.";
+                break;
+            case 2:
+                text = "Appa was drawn in the beginning of 2021.";
+                break;
+            case 3:
+                text = "I painted this fictional dragon in 2020.";
+                break;
+            case 4:
+                text = "This is one of the first drawings I drew in my dorm.";
+                break; 
+            case 5:
+                text = "I painted these dandelions the summer before college.";
+                break;
+            case 6:
+                text = "This drawing of Itachi was done in 2019.";
+                break;
+            case 7:
+                text = "Using paint swatches, I drew this abstract design.";
+                break;              
+        }
+        return text;
+    }
+
+
+
+
 
     // Page 2 JS
 

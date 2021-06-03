@@ -171,30 +171,58 @@
     let sq5 = document.getElementById('sq5');
     let sq6 = document.getElementById('sq6');
     let sq7 = document.getElementById('sq7');
-    let sqs = [sq1, sq2, sq3, sq4, sq5, sq6, sq7];
 
-    for(let i = 0; i < 7; i++) {
-        sqs[i].addEventListener('mouseover', function(event){
-            hoverOnEffect(sqs[i], i+1);
-        });
-        sqs[i].addEventListener('mouseout', function(event){
-            hoverOffEffect(sqs[i], i+1);
-        });
-    }
-    
-
-    /* sq1.addEventListener('mouseover', function(event){
+    sq1.addEventListener('mouseover', function(){
         hoverOnEffect(sq1, 1);
+    }); 
+    sq1.addEventListener('mouseout', function(){
+        hoverOffEffect(sq1, 1);
     });
-    sq1.addEventListener('mouseout', function(event){
-        hoverOffEffect(sq1);
+    sq2.addEventListener('mouseover', function(){
+        hoverOnEffect(sq2, 2);
+    }); 
+    sq2.addEventListener('mouseout', function(){
+        hoverOffEffect(sq2, 2);
     });
- */
+    sq3.addEventListener('mouseover', function(){
+        hoverOnEffect(sq3, 3);
+    }); 
+    sq3.addEventListener('mouseout', function(){
+        hoverOffEffect(sq3, 3);
+    });
+
+    sq4.addEventListener('mouseover', function(){
+        hoverOnEffect(sq4, 4);
+    }); 
+    sq4.addEventListener('mouseout', function(){
+        hoverOffEffect(sq4, 4);
+    });
+
+    sq5.addEventListener('mouseover', function(){
+        hoverOnEffect(sq5, 5);
+    }); 
+    sq5.addEventListener('mouseout', function(){
+        hoverOffEffect(sq5, 5);
+    });
+
+    sq6.addEventListener('mouseover', function(){
+        hoverOnEffect(sq6, 6);
+    }); 
+    sq6.addEventListener('mouseout', function(){
+        hoverOffEffect(sq6, 6);
+    });
+
+    sq7.addEventListener('mouseover', function(){
+        hoverOnEffect(sq7, 7);
+    }); 
+    sq7.addEventListener('mouseout', function(){
+        hoverOffEffect(sq7, 7);
+    });
 
     function hoverOnEffect(sq, index) {
-        if (index == 1) {
-            backSec1.style.visibility = "hidden";
-        }
+        //if (index == 1) {
+          //  backSec1.style.visibility = "hidden";
+        //}
         let value = changeText(index);
         if (index != 7) {
             sq.innerHTML =  `<p class="squareText">${value}<p>`;
@@ -204,9 +232,9 @@
     }
 
     function hoverOffEffect(sq, index) {
-        if (index == 1) {
-            backSec1.style.visibility = "visible";
-        }
+        //if (index == 1) {
+          //  backSec1.style.visibility = "visible";
+        //}
         sq.innerHTML = ``;
     }
 
@@ -214,7 +242,7 @@
         let text;
         switch(index) {
             case 1:
-                text = "I drew these koi fish during quaratine.";
+                text = "I drew these koi fish during quarantine.";
                 break;
             case 2:
                 text = "Appa was drawn in the beginning of 2021.";

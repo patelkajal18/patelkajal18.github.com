@@ -485,6 +485,7 @@ a:hover {
     position: absolute;
     cursor: pointer;
     margin-top: 5px;
+
 }
 
 #sq1 {top: 0; left: 0;}
@@ -509,8 +510,10 @@ a:hover {
     position: absolute;
     padding: 20px;
     opacity: 1;
-    font-size: larger;
+    font-size: 15px;
     font-weight: 800;
+    line-height: 440px;
+    text-decoration: 4px ghostwhite solid underline;
 }
 
 .squareTextLong {
@@ -522,6 +525,8 @@ a:hover {
     position: absolute;
     padding: 20px;
     opacity: 1;
-    font-size: larger;
+    font-size: 15px;
     font-weight: 800;
+    text-decoration: 4px ghostwhite solid underline;
+    line-height: 880px;
 }

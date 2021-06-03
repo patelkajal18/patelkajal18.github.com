@@ -40,6 +40,8 @@
         sec1b.style.display = "flex";
         sec2.style.display = "none";
         sec3.style.display = "none";
+        body.style.backgroundImage = "url('./images/wallBackground.jpg')";
+        //main.style.overflow = "scroll";
     })
 
     backSec1b.addEventListener('click', function(){
@@ -47,6 +49,8 @@
         sec1b.style.display = "flex";
         sec2.style.display = "none";
         sec3.style.display = "none";
+        body.style.backgroundImage = "url('./images/wallBackground.jpg')";
+        //main.style.overflow = "scroll";
     })
 
     backSec1.addEventListener('click', function(){
@@ -62,6 +66,7 @@
         sec1b.style.display = "none";
         sec2.style.display = "none";
         sec3.style.display = "none";
+        //main.style.overflow = "hidden";
     })
 
     toSecPage.addEventListener("click", function(){
@@ -71,7 +76,10 @@
         main.style.background = "transparent";
         mag.style.display = "none";
         main.style.height = "728px";
+        //main.style.overflow = "overlay";
         body.style.height = "728px";
+        body.style.backgroundColor = "#E4E4E4";
+        //body.style.backgroundImage = "";
         body.style.backgroundImage = "url('./images/wallBackground.jpg')";
     })
 
@@ -84,6 +92,9 @@
         body.style.height = "728px";
         main.style.background = "transparent";
         mag.style.display = "none";
+        //main.style.overflow = "overlay";
+        body.style.backgroundColor = "#E4E4E4";
+        //body.style.backgroundImage = "";
         body.style.backgroundImage = "url('./images/wallBackground.jpg')";
     })
 
@@ -220,9 +231,6 @@
     });
 
     function hoverOnEffect(sq, index) {
-        //if (index == 1) {
-          //  backSec1.style.visibility = "hidden";
-        //}
         let value = changeText(index);
         if (index != 7) {
             sq.innerHTML =  `<p class="squareText">${value}<p>`;
@@ -232,9 +240,6 @@
     }
 
     function hoverOffEffect(sq, index) {
-        //if (index == 1) {
-          //  backSec1.style.visibility = "visible";
-        //}
         sq.innerHTML = ``;
     }
 
@@ -326,6 +331,7 @@
             main.style.backgroundImage = "none";
             main.style.position = "relative";
             main.style.height = "1500px";
+            //main.style.overflow = "scroll";
             body.style.height = "1500px";
             body.style.backgroundImage = "url('./images/wallBackground.jpg')";
         }
